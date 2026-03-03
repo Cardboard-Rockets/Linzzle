@@ -1,3 +1,0 @@
-repository "Linzzle/Linzzle@10170639180034@cloud"
-  path "/"
-    smartbranch "/main/Test"
