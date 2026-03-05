@@ -105,10 +105,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 320
-        height: 480
+        width: 160
+        height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -121,11 +121,121 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: SERVERBLOCKS_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdf1b8d7bbcc4d69a93befd7c60c5b1
+      internalID: 508069313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SERVERBLOCKS_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532dd9f97973d48b183c5376a13b4272
+      internalID: -641901895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SERVERBLOCKS_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa10d095cbda94e03b16f4433f5e955f
+      internalID: 1659124243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SERVERBLOCKS_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8457b69e3761d4306869c45e88771cf6
+      internalID: 1572877901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SERVERBLOCKS_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e08d7f2b87b3427cb853965ba4b86d3
+      internalID: -1577921929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a421418eda27e426f93b024e614dfa5c
     internalID: 0
     vertices: []
     indices: 
@@ -136,6 +246,11 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       SERVERBLOCKS_0: 164082275619035541
+      SERVERBLOCKS_1: 508069313
+      SERVERBLOCKS_2: -641901895
+      SERVERBLOCKS_3: 1659124243
+      SERVERBLOCKS_4: 1572877901
+      SERVERBLOCKS_5: -1577921929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
