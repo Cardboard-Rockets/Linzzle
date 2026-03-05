@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8065252512732583581}
-  - component: {fileID: 6225629153288475455}
   - component: {fileID: 7543952937589613650}
   m_Layer: 0
   m_Name: MusicManager
@@ -34,14 +33,6 @@ Transform:
   - {fileID: 5756818764938969518}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!81 &6225629153288475455
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5881376203108159929}
-  m_Enabled: 1
 --- !u!114 &7543952937589613650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c80ffc61751e2429f8ee0e903a1c8a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  src: {fileID: 0}
 --- !u!1 &5984681922636567390
 GameObject:
   m_ObjectHideFlags: 0
