@@ -39,11 +39,11 @@ public class PickSystem : MonoBehaviour
 
     public void SetWireBlock()
     {
-        //WIRES SCRIPT 1
+        PlaceScript.tileid = 7;
     }
 
     public void SetWirePower()
     {
-        //WIRES SCRIPT 2
+        PlaceScript.tileid = 8;
     }
 }

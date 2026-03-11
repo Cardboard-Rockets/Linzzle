@@ -23,12 +23,12 @@ public class PlaceScript : MonoBehaviour
         {
             Vector3Int cellpos =  GetTilePositionFromMouse();
 
-            if(tileMap.GetTile(cellpos)==null)
+                PlaceTileAtMousePosition(GetTilePositionFromMouse(),CurrentTile,tileMap);
+                
+            if (tileid != 7 && Input.GetMouseButtonUp(0)==false)
             {
-                PlaceTileAtMousePosition(CurrentTile);
-                MoneySystem.buy(tileid);
+                tileid = 0;
             }
-            tileid = 0;
 
         }
         if (Input.GetMouseButtonDown(1))
@@ -37,15 +37,19 @@ public class PlaceScript : MonoBehaviour
         }
     }
 
-    Vector3Int GetTilePositionFromMouse()
+    public Vector3Int GetTilePositionFromMouse()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         return grid.WorldToCell(mousePosition);
     }
 
-    void PlaceTileAtMousePosition(TileBase tile)
+    public void PlaceTileAtMousePosition(Vector3Int p,TileBase tile,Tilemap Map)
     {
-        tileMap.SetTile(GetTilePositionFromMouse(), tile);
+        if (Map.GetTile(p) == null)
+        {
+            MoneySystem.buy(tileid);
+            Map.SetTile(p, tile);
+        }
     }
 
     bool isInArea()
