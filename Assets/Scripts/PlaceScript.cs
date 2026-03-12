@@ -21,12 +21,19 @@ public class PlaceScript : MonoBehaviour
         CurrentTile = tiles[tileid];
         if (CurrentTile!=null && Input.GetMouseButtonDown(0) && isInArea() && MoneySystem.isAvailable())
         {
+            if(tileid==7 || tileid==8){
+                if(Input.GetMouseButton(0)){
+                    Vector3Int cellpos =  GetTilePositionFromMouse();
+                    PlaceTileAtMousePosition(GetTilePositionFromMouse(),CurrentTile,tileMap);
+                }
+                if(Input.GetMouseButtonUp(0)){
+                    tileid = 0;
+                }
+            }
+            else{
             Vector3Int cellpos =  GetTilePositionFromMouse();
 
                 PlaceTileAtMousePosition(GetTilePositionFromMouse(),CurrentTile,tileMap);
-                
-            if (tileid != 7 && Input.GetMouseButtonUp(0)==false)
-            {
                 tileid = 0;
             }
 
