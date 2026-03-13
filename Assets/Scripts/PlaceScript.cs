@@ -9,6 +9,7 @@ public class PlaceScript : MonoBehaviour
     public static int tileid;
     public TileBase[] tiles;
     public TileBase CurrentTile;
+    [SerializeField] PhysicsSystem_Script physicScript;
 
 
     public int xmin;
@@ -36,7 +37,7 @@ public class PlaceScript : MonoBehaviour
                 PlaceTileAtMousePosition(GetTilePositionFromMouse(),CurrentTile,tileMap);
                 tileid = 0;
             }
-
+            physicScript.RecalculateSystem();
         }
         if (Input.GetMouseButtonDown(1))
         {

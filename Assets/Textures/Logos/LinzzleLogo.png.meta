@@ -1,0 +1,660 @@
+fileFormatVersion: 2
+guid: deff1f73926dd4a598eecc0c765ccb15
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3200421152595937079
+    second: LinzzleLogo_0
+  - first:
+      213: -4061806622222055259
+    second: LinzzleLogo_1
+  - first:
+      213: -8416797009085360760
+    second: LinzzleLogo_2
+  - first:
+      213: -909164287550891274
+    second: LinzzleLogo_3
+  - first:
+      213: -551027667650674835
+    second: LinzzleLogo_4
+  - first:
+      213: 5750469645608855289
+    second: LinzzleLogo_5
+  - first:
+      213: -6910783728485883480
+    second: LinzzleLogo_6
+  - first:
+      213: 5085918094972228310
+    second: LinzzleLogo_7
+  - first:
+      213: -2404665865801163193
+    second: LinzzleLogo_8
+  - first:
+      213: -8949453071662781600
+    second: LinzzleLogo_9
+  - first:
+      213: -3293193827869787303
+    second: LinzzleLogo_10
+  - first:
+      213: -4978705952819272771
+    second: LinzzleLogo_11
+  - first:
+      213: 6714963777226145852
+    second: LinzzleLogo_12
+  - first:
+      213: -1762303108200646870
+    second: LinzzleLogo_13
+  - first:
+      213: 6769987560974598979
+    second: LinzzleLogo_14
+  - first:
+      213: -6162165710253076826
+    second: LinzzleLogo_15
+  - first:
+      213: -51722904796514036
+    second: LinzzleLogo_16
+  - first:
+      213: 293417918027271907
+    second: LinzzleLogo_17
+  - first:
+      213: 4508877013129698328
+    second: LinzzleLogo_18
+  - first:
+      213: -2494677768666098633
+    second: LinzzleLogo_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LinzzleLogo_0
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 248
+        width: 537
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c87fd31be1d593d0800000000000000
+      internalID: -3200421152595937079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 73
+        width: 88
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a80020c56091a7c0800000000000000
+      internalID: -4061806622222055259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_2
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 207
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88595eed6b7813b80800000000000000
+      internalID: -8416797009085360760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 186
+        width: 24
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fade0eb5eff163f0800000000000000
+      internalID: -909164287550891274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_4
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 186
+        width: 24
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6ff448714b5a58f0800000000000000
+      internalID: -551027667650674835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_5
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 186
+        width: 24
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6ae26eca5cdcf40800000000000000
+      internalID: 5750469645608855289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_6
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 195
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1ac0850d6f710a0800000000000000
+      internalID: -6910783728485883480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_7
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 182
+        width: 37
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d21d8f9f8fc49640800000000000000
+      internalID: 5085918094972228310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_8
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 73
+        width: 71
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e1a61b229e0aed0800000000000000
+      internalID: -2404665865801163193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_9
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 188
+        width: 20
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06be289f8d72dc380800000000000000
+      internalID: -8949453071662781600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_10
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 188
+        width: 20
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95bff4169a93c42d0800000000000000
+      internalID: -3293193827869787303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_11
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 188
+        width: 20
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3a511705518eab0800000000000000
+      internalID: -4978705952819272771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_12
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 188
+        width: 20
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c300e2d5af7503d50800000000000000
+      internalID: 6714963777226145852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_13
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 186
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27322109aa0b87e0800000000000000
+      internalID: -1762303108200646870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_14
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 73
+        width: 92
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34344b951d3d3fd50800000000000000
+      internalID: 6769987560974598979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_15
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 188
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aec5416fe69b7aa0800000000000000
+      internalID: -6162165710253076826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_16
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 73
+        width: 37
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c093ad8ca4e384ff0800000000000000
+      internalID: -51722904796514036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_17
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 73
+        width: 79
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee00c6ba0e621400800000000000000
+      internalID: 293417918027271907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_18
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 73
+        width: 80
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c158f11cfb29e30800000000000000
+      internalID: 4508877013129698328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_19
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 73
+        width: 37
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734d79969cf116dd0800000000000000
+      internalID: -2494677768666098633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LinzzleLogo_20
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 20
+        width: 636
+        height: 406
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98b3870d148d412e927d21a3c7f5b5d
+      internalID: -975276213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e76cff0a238164bd4b8e1149aea14ff7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LinzzleLogo_0: -3200421152595937079
+      LinzzleLogo_1: -4061806622222055259
+      LinzzleLogo_10: -3293193827869787303
+      LinzzleLogo_11: -4978705952819272771
+      LinzzleLogo_12: 6714963777226145852
+      LinzzleLogo_13: -1762303108200646870
+      LinzzleLogo_14: 6769987560974598979
+      LinzzleLogo_15: -6162165710253076826
+      LinzzleLogo_16: -51722904796514036
+      LinzzleLogo_17: 293417918027271907
+      LinzzleLogo_18: 4508877013129698328
+      LinzzleLogo_19: -2494677768666098633
+      LinzzleLogo_2: -8416797009085360760
+      LinzzleLogo_20: -975276213
+      LinzzleLogo_3: -909164287550891274
+      LinzzleLogo_4: -551027667650674835
+      LinzzleLogo_5: 5750469645608855289
+      LinzzleLogo_6: -6910783728485883480
+      LinzzleLogo_7: 5085918094972228310
+      LinzzleLogo_8: -2404665865801163193
+      LinzzleLogo_9: -8949453071662781600
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

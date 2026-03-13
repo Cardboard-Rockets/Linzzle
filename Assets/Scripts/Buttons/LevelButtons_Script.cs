@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LevelButtons_Script : MonoBehaviour
 {
+    [SerializeField] PhysicsSystem_Script physicScript;
     public AudioSource src;
     bool muted;
     public void MuteButton()
@@ -15,5 +16,10 @@ public class LevelButtons_Script : MonoBehaviour
         {
             src.mute = false;
         }
+    }
+
+    public void StartButton()
+    {
+        physicScript.Attack();
     }
 }
