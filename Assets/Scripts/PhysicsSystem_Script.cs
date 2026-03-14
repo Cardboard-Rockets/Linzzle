@@ -27,13 +27,14 @@ public class PhysicsSystem_Script : MonoBehaviour
     [SerializeField] int Type2Endure;
     [SerializeField] int Type3Endure;
     [SerializeField] float Timer1 = 0;
+    [SerializeField] public string CurrentLevel;
 
     [Header("Attack")]
-    [SerializeField] int RamNeed;
-    [SerializeField] int MemoryNeed;
-    [SerializeField] int Type1Amount;
-    [SerializeField] int Type2Amount;
-    [SerializeField] int Type3Amount;
+    [SerializeField] public int RamNeed;
+    [SerializeField] public int MemoryNeed;
+    [SerializeField] public int Type1Amount;
+    [SerializeField] public int Type2Amount;
+    [SerializeField] public int Type3Amount;
     [SerializeField] bool isAttacking;
 
 
