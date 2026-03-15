@@ -2930,6 +2930,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1253009845}
+    - target: {fileID: 4632681839476722802, guid: 412aa58ad73ca4ce1b0c03b95343041a, type: 3}
+      propertyPath: ps
+      value: 
+      objectReference: {fileID: 1529623387}
     - target: {fileID: 4849387595654702182, guid: 412aa58ad73ca4ce1b0c03b95343041a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
