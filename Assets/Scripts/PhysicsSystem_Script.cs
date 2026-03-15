@@ -37,6 +37,10 @@ public class PhysicsSystem_Script : MonoBehaviour
     [SerializeField] public int Type3Amount;
     [SerializeField] bool isAttacking;
 
+    [Header("Check")]
+    [SerializeField] public bool isLose;
+    [SerializeField] public bool isWin;
+
 
     void Start()
     {
@@ -157,10 +161,12 @@ public class PhysicsSystem_Script : MonoBehaviour
         if(Temperature<=110 && (Type1Endure - Type1Amount) >=0 && (Type2Endure - Type2Amount) >=0 && (Type3Endure - Type3Amount) >=0
          && (RamAmount - RamNeed) >=0 && (MemoryAmount - MemoryNeed) >=0){
             Debug.Log("You WIN!");
+            isWin = true;
             Timer1 = 0;
          }
          else{
             Debug.Log("You LOSE!");
+            isLose = true;
             Timer1 = 0;
          }
     }
