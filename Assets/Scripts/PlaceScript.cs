@@ -30,7 +30,7 @@ public class PlaceScript : MonoBehaviour
                 Vector3Int cellpos = GetTilePositionFromMouse();
 
                 PlaceTileAtMousePosition(GetTilePositionFromMouse(), CurrentTile, tileMap);
-<<<<<<< Updated upstream
+
                 if (tileid != 7 && tileid != 8) { 
                     tileid = 0; 
                 }
@@ -38,17 +38,7 @@ public class PlaceScript : MonoBehaviour
             if ((tileid == 7|| tileid == 8) && Input.GetMouseButtonUp(0))
             {
                tileid = 0;
-=======
-                if (tileid != 7 && tileid != 8)
-                {
-                    tileid = 0;
-                }
-            }
-            if ((tileid == 7 || tileid == 8) && Input.GetMouseButtonUp(0))
-            {
-                tileid = 0;
 
->>>>>>> Stashed changes
             }
 
             physicScript.RecalculateSystem();
