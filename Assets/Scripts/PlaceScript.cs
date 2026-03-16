@@ -17,11 +17,16 @@ public class PlaceScript : MonoBehaviour
     public int ymin;
     public int ymax;
 
+   
+
     void Update()
     {
         CurrentTile = tiles[tileid];
-        if (CurrentTile!=null && Input.GetMouseButtonDown(0) && isInArea() && MoneySystem.isAvailable())
+        if (Input.GetKeyDown(KeyCode.Q)) { tileid = 0; }
+
+        if (CurrentTile!=null && isInArea() && MoneySystem.isAvailable())
         {
+
             if(tileid==7 || tileid==8){
                 if(Input.GetMouseButton(0)){
                     Vector3Int cellpos =  GetTilePositionFromMouse();
@@ -42,7 +47,12 @@ public class PlaceScript : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log(GetTilePositionFromMouse());
+
         }
+        //if (Input.GetMouseButtonDown(1))
+        //{
+        //    Debug.Log(GetTilePositionFromMouse());
+        //}
     }
 
     public Vector3Int GetTilePositionFromMouse()
