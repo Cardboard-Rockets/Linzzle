@@ -10,41 +10,44 @@ public class WireSearh : MonoBehaviour
     [SerializeField] Tilemap tileMap;
     [SerializeField] PlaceScript place;
     private Tile CurrentTile;
-    Vector3Int PositionStart;
-    Vector3Int Castom;
+    
     Vector3Int PositionEnd;
 
     void Update()
     {
+        
         if (place.CurrentTile != null && place.tiles[PlaceScript.tileid] == tile[0] && MoneySystem.isAvailable())
         {
 
-            PositionStart = place.GetTilePositionFromMouse();
-
-            //Debug.Log(PositionStart);
-            if (Input.GetMouseButton(0))
+            if (PositionEnd != place.GetTilePositionFromMouse()&& Input.GetMouseButton(0))
             {
-                if (PositionEnd != place.GetTilePositionFromMouse())
+
+
+                if (place.GetTilePositionFromMouse().x > PositionEnd.x)
                 {
-                    Castom = place.GetTilePositionFromMouse();
-
-                    if (place.GetTilePositionFromMouse().x > PositionEnd.x)
-                    {
-
-                        Spawn(tileMap, tile[0], Castom, 0);
-                    }
-                    if (place.GetTilePositionFromMouse().x < PositionEnd.x)
-                    {
-
-                        Spawn(tileMap, tile[0], Castom, 180);
-                    }
-
-                    PositionEnd = place.GetTilePositionFromMouse();
-
-                    //Debug.Log(PositionEnd);
+                    Spawn(tileMap, tile[0], PositionEnd, 0);
                 }
+                else if (place.GetTilePositionFromMouse().x < PositionEnd.x)
+                {
+                    Spawn(tileMap, tile[0], PositionEnd, 180);
+                }
+                else if (place.GetTilePositionFromMouse().y < PositionEnd.y)
+                {
+                    Spawn(tileMap, tile[0], PositionEnd, 270);
+                }
+                else if (place.GetTilePositionFromMouse().y > PositionEnd.y)
+                {
+                    Spawn(tileMap, tile[0], PositionEnd, 90);
+                }
+
+                
+
+
             }
+            PositionEnd = place.GetTilePositionFromMouse();
         }
+        //else if(place.tiles[PlaceScript.tileid] == tile[0]  && Input.GetMouseButtonUp(0)) { PlaceScript.tileid = 0; }
+
     }
 
     void Spawn(Tilemap map, Tile tile, Vector3Int position, int Degre)
