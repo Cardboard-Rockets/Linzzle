@@ -26,24 +26,25 @@ public class PlaceScript : MonoBehaviour
 
         if (CurrentTile!=null && isInArea() && MoneySystem.isAvailable())
         {
+            if (Input.GetMouseButtonDown(0))
+            {
+                Vector3Int cellpos = GetTilePositionFromMouse();
 
-            if(tileid==7 || tileid==8){
-                if(Input.GetMouseButton(0)){
-                    Vector3Int cellpos =  GetTilePositionFromMouse();
-                    PlaceTileAtMousePosition(GetTilePositionFromMouse(),CurrentTile,tileMap);
-                }
-                if(Input.GetMouseButtonUp(0)){
-                    tileid = 0;
+                PlaceTileAtMousePosition(GetTilePositionFromMouse(), CurrentTile, tileMap);
+                if (tileid != 7 && tileid != 8) { 
+                    tileid = 0; 
                 }
             }
-            else{
-            Vector3Int cellpos =  GetTilePositionFromMouse();
-
-                PlaceTileAtMousePosition(GetTilePositionFromMouse(),CurrentTile,tileMap);
-                tileid = 0;
+            if ((tileid == 7|| tileid == 8) && Input.GetMouseButtonUp(0))
+            {
+               tileid = 0;
             }
+
             physicScript.RecalculateSystem();
         }
+
+
+
         if (Input.GetMouseButtonDown(1))
         {
             Debug.Log(GetTilePositionFromMouse());

@@ -14,13 +14,12 @@ public class WireSearh : MonoBehaviour
 
     void Update()
     {
-        
+
         if (place.CurrentTile != null && place.tiles[PlaceScript.tileid] == tile[0] && MoneySystem.isAvailable())
         {
 
-            if (PositionEnd != place.GetTilePositionFromMouse()&& Input.GetMouseButton(0))
-
-
+            if (PositionEnd != place.GetTilePositionFromMouse() && Input.GetMouseButton(0))
+            {
 
                 if (place.GetTilePositionFromMouse().x > PositionEnd.x)
                 {
@@ -40,17 +39,14 @@ public class WireSearh : MonoBehaviour
                     Spawn(tileMap, tile[0], PositionEnd, 90);
                 }
 
-                
-
-
             }
             PositionEnd = place.GetTilePositionFromMouse();
         }
-        //else if(place.tiles[PlaceScript.tileid] == tile[0]  && Input.GetMouseButtonUp(0)) { PlaceScript.tileid = 0; }
-
     }
+    //else if(place.tiles[PlaceScript.tileid] == tile[0]  && Input.GetMouseButtonUp(0)) { PlaceScript.tileid = 0; }
 
-    void Spawn(Tilemap map, Tile tile, Vector3Int position, int Degre)
+
+    public void Spawn(Tilemap map, Tile tile, Vector3Int position, int Degre)
     {
         map.SetTile(position, null);
         place.PlaceTileAtMousePosition(position, tile, tileMap);
@@ -58,5 +54,7 @@ public class WireSearh : MonoBehaviour
         map.SetTransformMatrix(position, matrix);
 
     }
-
 }
+
+    
+
