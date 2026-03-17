@@ -2,7 +2,7 @@
 
 Game Overview
 
-PHP Journey is a top-down strategy-puzzle game where you build and defend your server against the villainous ERROR-7e4c. Learn PHP through interactive dialogue, solve coding challenges, and construct the ultimate server setup!
+Linzzle is a top-down strategy-puzzle game where you build and defend your server against the villainous ERROR-7e4c. Learn PHP through interactive dialogue, solve coding challenges, and construct the ultimate server setup!
 
 🏗 Core Gameplay Loop
 
