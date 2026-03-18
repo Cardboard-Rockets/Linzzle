@@ -13,7 +13,7 @@ public static class TooltipFactory
         RectTransform rect = root.AddComponent<RectTransform>();
         rect.anchorMin = rect.anchorMax = Vector2.zero;
         rect.pivot = new Vector2(0f, 1f);
-        rect.sizeDelta = new Vector2(260, 90);
+        rect.sizeDelta = new Vector2(260, 120);
 
         Image bg = root.AddComponent<Image>();
         bg.color = new Color(0.08f, 0.08f, 0.10f, 0.95f);
