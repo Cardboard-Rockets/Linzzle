@@ -57,6 +57,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bab4d687463a54a9bba80762192f0a96, type: 2}
   - {fileID: 11400000, guid: cb8d08927d2f0410faff94dc86fa43ff, type: 2}
   CurrentTile: {fileID: 0}
+  physicScript: {fileID: 0}
+  FE: {fileID: 11400000, guid: c295cac9892fb4193ab2d7dbfb24d30f, type: 2}
+  BE: {fileID: 11400000, guid: bcd72788cc824405eab0c33c9a4fbe0c, type: 2}
+  S: {fileID: 11400000, guid: 74f95595abf944b27815d6269c84d25f, type: 2}
+  ExtraTileInfoBlock: {fileID: 0}
+  TileInfoBlock: {fileID: 0}
+  msys: {fileID: 0}
   xmin: -4
   xmax: 3
   ymin: -6

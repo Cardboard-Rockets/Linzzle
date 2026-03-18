@@ -3,55 +3,53 @@ using UnityEngine.Tilemaps;
 
 public class PlaceScript : MonoBehaviour
 {
+    [Header("Tilemaps")]
     public Grid grid;
     public Tilemap tileMap;
     public static int tileid;
     public TileBase[] tiles;
+    
     public TileBase CurrentTile;
     [SerializeField] PhysicsSystem_Script physicScript;
+    [SerializeField] TileInfoScript tscr;
 
-
+    [Header("Building area coordinates")]
     public int xmin;
     public int xmax;
     public int ymin;
     public int ymax;
 
 
-
     void Update()
     {
+
         CurrentTile = tiles[tileid];
         if (Input.GetKeyDown(KeyCode.Q)) { tileid = 0; }
+
+        if(CurrentTile == null){
+            if(Input.GetMouseButtonDown(0)){
+                tscr.ShowTileInfo();
+            }
+        }
 
         if (CurrentTile != null && isInArea() && MoneySystem.isAvailable())
         {
             if (Input.GetMouseButtonDown(0))
             {
                 Vector3Int cellpos = GetTilePositionFromMouse();
-
-                PlaceTileAtMousePosition(GetTilePositionFromMouse(), CurrentTile, tileMap);
+                PlaceTileAtMousePosition(cellpos, CurrentTile, tileMap);
 
                 if (tileid != 7 && tileid != 8) { 
                     tileid = 0; 
                 }
             }
-            if ((tileid == 7|| tileid == 8) && Input.GetMouseButtonUp(0))
+            if ((tileid == 7 || tileid == 8) && Input.GetMouseButtonUp(0))
             {
                tileid = 0;
-
             }
 
             physicScript.RecalculateSystem();
         }
-
-
-
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(GetTilePositionFromMouse());
-
-        }
-
     }
 
     public Vector3Int GetTilePositionFromMouse()
@@ -66,13 +64,18 @@ public class PlaceScript : MonoBehaviour
         {
             MoneySystem.buy(tileid);
             Map.SetTile(p, tile);
+            
+            // Скрываем информационные блоки после установки тайла
+            tscr.HideInfoBlocks();
         }
     }
 
     bool isInArea()
     {
         Vector3Int cellpos = GetTilePositionFromMouse();
-        return cellpos.x > xmin && cellpos.x < xmax &&
-                cellpos.y > ymin && cellpos.y < ymax;
+        return cellpos.x >= xmin && cellpos.x <= xmax &&
+                cellpos.y >= ymin && cellpos.y <= ymax;
     }
+
+    
 }
