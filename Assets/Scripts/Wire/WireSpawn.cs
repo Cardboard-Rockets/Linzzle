@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public class WireSpawn : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class WireSpawn : MonoBehaviour
             {
                 lastPlacedPosition = currentPos;
                 // —тавим первый провод горизонтально (по умолчанию)
-                Spawn(tileMap, tile[0], currentPos, 0);
+                //Spawn(tileMap, tile[0], currentPos, 0);
             }
 
             // ѕродолжаем рисовать линию
@@ -80,8 +81,10 @@ public class WireSpawn : MonoBehaviour
                     }
 
                     // —тавим пр€мой провод на новой позиции
-                    Spawn(tileMap, tile[0], currentPos, wireRotation);
-
+                    if (tileMap.GetTile(currentPos) == null)
+                    {
+                        Spawn(tileMap, tile[0], currentPos, wireRotation);
+                    }
                     lastPlacedPosition = currentPos;
                     lastDirection = wireRotation;
                 }
@@ -97,11 +100,12 @@ public class WireSpawn : MonoBehaviour
 
     public void Spawn(Tilemap map, Tile tile, Vector3Int position, int Degre)
     {
-        map.SetTile(position, null);
-        place.PlaceTileAtMousePosition(position, tile, tileMap);
-        Matrix4x4 matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, Degre), Vector3.one);
-        map.SetTransformMatrix(position, matrix);
-
+        
+            map.SetTile(position, null);
+            place.PlaceTileAtMousePosition(position, tile, tileMap);
+            Matrix4x4 matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, Degre), Vector3.one);
+            map.SetTransformMatrix(position, matrix);
+        
     }
 
 }
