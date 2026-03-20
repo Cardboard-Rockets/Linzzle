@@ -158,7 +158,7 @@ public class TileInfoScript : MonoBehaviour
 
     switch(j)
     {
-        case 0: data.desc = "Повышает температуру на 80" ; data.name = "Процессор"; break;
+        case 0: data.desc = "Считок-бурмалдок" ; data.name = "Считок"; break;
         case 1: data.desc = "Объем памяти: 1тБ\nПовышает температуру на 60" ; data.name = "HDD"; break;
         case 2: data.desc = "Объем памяти: 8гБ\nПовышает температуру на 40" ; data.name =  "RAM"; break;
         case 3: data.desc = "Понижает температруру на 20" ; data.name =  "Кулер"; break;
@@ -173,6 +173,20 @@ public class TileInfoScript : MonoBehaviour
     }
     return data;
 }
+public string isFEorBE()
+    {
+    Vector3Int tp = pscr.GetTilePositionFromMouse();
+    TileBase clickedTile = pscr.tileMap.GetTile(tp);
+        if(clickedTile == FE)
+        {
+              return "Front";  
+        }
+        if(clickedTile == BE)
+        {
+            return "Back";
+        }
+        else{return"";}
+    }
 }
 
 
