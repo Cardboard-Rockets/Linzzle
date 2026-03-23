@@ -1,65 +1,23 @@
-🎮 How to Play
+Об игре.
 
-Game Overview
+Linzzle - игра в жанре логистической стратегии с видом сверху, в которой пользователю предстоит помочь начинающей компании справиться с атаками злостного хакера ERROR-7e4c. Учитесь у вашего наставника Ленса, проходите уровни, изучайте программирование. Не дайте компании потерпеть крах!
 
-Linzzle is a top-down strategy-puzzle game where you build and defend your server against the villainous ERROR-7e4c. Learn PHP through interactive dialogue, solve coding challenges, and construct the ultimate server setup!
+Геймпленая составляющая.
 
-🏗 Core Gameplay Loop
+1. Обучайся!
+   В начале каждого уровня будет появляться диалоговое окно, в котором ваш наставник Ленс будет вводить вас в курс дела. Он расскажет вам новые функции языка PHP, которые понадобятся вам для прохождения уровня, а также углубит вас в теорию: Что такое backend, для чего нужны запросы и т.д. В конце каждого диалога Ленс даст вам практическое задание, которое нужно будет выполнить.
 
-1. Learn from Lens 📚
+2. Настраивай сервер!
+   Внизу экрана, игроку будет представлен магазин, он содержит различные блоки, необходимые для сборки сервера. Нажав на кнопку "Информация", в верхней части экрана, вы сможете увидеть какой сервер потребуется вам на данном уровне. Важно учитывать бюджет, просто собрать "гига-сервер" который выдержит любой запрос не получится!
 
-At the start of each level, Lens (your mascot guide) appears with dialogue bubbles teaching PHP concepts. Listen carefully - these lessons will help you complete the coding challenges!
+3. Логистика!
+   В процессе обучения Ленс расскажет вам о связях между элементами. Вашей задачей будет в правильном порядке соединить все элементы с помощью проводов, которые можно найти в магазине, в нижней части экрана. Также все элементы нужно будет подключить к электричеству! Важно учитывать понятие cable managment, которое означает, что провода должны удобно лежать на рабочей поверхности, и не должны переплетаться друг с другом.
 
-2. Build Your Server 🖥️
+4. Как играть?
+   Чтобы начать настройку backend и приступить к выполнению практического задания, необходимо найти на карте блок с буквами "BE" на нем, нажать на него левой кнопкой, после нажать на кнопку "Настроить". Откроется текстовая область, в нее и нужно будет писать код по вашеу заданию.
+   Настройка frontend происходит по похожей схеме, вы находите нужный блок и нажимаете "Настроить". Откроется другое меню, в нем будут доступны ноды, их нужно будет расположить на рабочей поверхности, назвать в соответствии с вашими переменными в backend. И правильно соединить.
 
-Shop System: Use your mouse to purchase hardware blocks from the shop panel
-Placement Area: Drag and drop blocks onto the grid near your main server unit
-Block Types:
+5. Как побеждать?
+   Чтобы пройти уровень, ваш сервер должен соответствовать требованиям уровня, а также его температура не должна превышать 100 градусов. frontend и backend должны быть настроены в соответствии с заданием, а также все элементы должны быть правильно соединены и подключены к питанию. Если все эти условия соблюдены, при нажатии кнопки "Атака", которая находится около кнопки "Информация", проиграится анимация и появится диалог с Ленсом, который похвалит вас.
 
-RAM Blocks 💾 - Increase available memory
-Storage Blocks 📀 - Add permanent storage space
-CPU Blocks ⚡ - Boost processing power
-Cooling Units ❄️ - Prevent overheating
-3. Code in Backend Blocks ⌨️
-
-Click on backend blocks to open the coding interface
-Read the PHP challenge displayed on screen
-Write PHP code to solve the problem
-Get immediate feedback on your solution
-Topics progress from basic syntax to advanced concepts
-4. Play Frontend Minigames 🎨
-
-Click frontend blocks to launch color-based minigames
-Match colors, identify hex codes, or arrange CSS properties
-Success unlocks additional server capabilities
-5. Connect Everything 🔌
-
-Once all blocks are placed and challenges completed:
-
-Server Connections: Drag wires to connect blocks to each other
-Power Grid: Connect all blocks to the main power panel
-Valid Connections: Ensure proper pathways and no loose wires
-6. Battle ERROR-7e4c ⚔️
-
-Hit the START button to begin the attack sequence
-The villain launches HTTP requests at your server
-Your server must withstand the assault:
-
-✅ Pass Condition: Correct PHP code + adequate server specs
-❌ Fail Condition: Server explodes if requirements aren't met
-🎯 Victory Conditions
-
-To complete a level, you need:
-✓ All required hardware blocks placed and connected
-✓ Backend coding challenges solved correctly
-✓ Frontend minigames completed
-✓ Proper wire connections throughout
-✓ Server survives ERROR-7e4c's attack
-
-🎚️ Difficulty Progression
-As you advance through levels:
-More complex PHP challenges
-Larger server builds
-Tighter resource constraints
-Stronger enemy attacks
-New block types and mechanics
+Команда Cardboard Rockets рассчитывает, что данная обучающая игра поможет вам узнать что-то новое, а также желает вам удачи!
