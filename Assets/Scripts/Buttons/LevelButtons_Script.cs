@@ -23,9 +23,9 @@ public class LevelButtons_Script : MonoBehaviour
         InfoBlock.SetActive(false);
         LevelInfo.text = "Уровень " + levelManager.CurrentLevel; 
 
-        Tab1Info.text = physicScript.Type1Amount + " запросов типа 1";
-        Tab2Info.text = physicScript.Type2Amount + " запросов типа 2";
-        Tab3Info.text = physicScript.Type3Amount + " запросов типа 3";
+        Tab1Info.text = physicScript.Type1Amount + " запросов типа GET";
+        Tab2Info.text = physicScript.Type2Amount + " запросов типа POST";
+        Tab3Info.text = physicScript.Type3Amount + " запросов типа PUT";
 
         RamInfo.text = physicScript.RamNeed + "гБ оперативной памяти";
         MemoryInfo.text = physicScript.MemoryNeed + "гБ внутренней памяти";

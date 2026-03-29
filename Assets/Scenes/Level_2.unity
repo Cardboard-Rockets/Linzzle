@@ -119,6 +119,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &17590457
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -3793151326541026396, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: rcs
+      value: 
+      objectReference: {fileID: 1253009850}
+    - target: {fileID: -3793151326541026396, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: isOnLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3793151326541026396, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: cameraAnimator
+      value: 
+      objectReference: {fileID: 1253009851}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.44855
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.20012
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748973169674234174, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_Name
+      value: AnimationSystem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
 --- !u!1 &66784052
 GameObject:
   m_ObjectHideFlags: 0
@@ -4857,6 +4926,7 @@ GameObject:
   - component: {fileID: 1253009846}
   - component: {fileID: 1253009849}
   - component: {fileID: 1253009850}
+  - component: {fileID: 1253009851}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5004,6 +5074,29 @@ MonoBehaviour:
   maxX: 15
   minY: -12
   maxY: 3
+  borderSwitch: 0
+--- !u!95 &1253009851
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253009845}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d16e8fc879e164f0487c31927638709c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1286916371
 GameObject:
   m_ObjectHideFlags: 0
@@ -8130,3 +8223,4 @@ SceneRoots:
   - {fileID: 2142900434}
   - {fileID: 229291947}
   - {fileID: 1196585132}
+  - {fileID: 17590457}

@@ -410,6 +410,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113217119}
   m_CullTransparentMesh: 1
+--- !u!1001 &123032274
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -3793151326541026396, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: rcs
+      value: 
+      objectReference: {fileID: 1253009850}
+    - target: {fileID: -3793151326541026396, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: isOnLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3793151326541026396, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: cameraAnimator
+      value: 
+      objectReference: {fileID: 1253009851}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.44855
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.20012
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297067046147329489, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748973169674234174, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+      propertyPath: m_Name
+      value: AnimationSystem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+--- !u!114 &123032275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -3793151326541026396, guid: 7d35e7374825242a3aeb5c86978a0914, type: 3}
+  m_PrefabInstance: {fileID: 123032274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4969880a1a09c4f70bdda278932d6a66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationScript
 --- !u!1001 &127538174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -686,6 +766,7 @@ GameObject:
   - component: {fileID: 182165411}
   - component: {fileID: 182165410}
   - component: {fileID: 182165409}
+  - component: {fileID: 182165412}
   m_Layer: 5
   m_Name: TABLE_BUTTON2
   m_TagString: Untagged
@@ -818,6 +899,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 182165407}
   m_CullTransparentMesh: 1
+--- !u!114 &182165412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182165407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 182165407}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 182165407}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &220494518
 GameObject:
   m_ObjectHideFlags: 0
@@ -2809,6 +2935,7 @@ GameObject:
   - component: {fileID: 743794940}
   - component: {fileID: 743794939}
   - component: {fileID: 743794938}
+  - component: {fileID: 743794941}
   m_Layer: 5
   m_Name: WIRE_BLOCK_BUTTON
   m_TagString: Untagged
@@ -2941,6 +3068,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 743794936}
   m_CullTransparentMesh: 1
+--- !u!114 &743794941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743794936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 743794936}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 743794936}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &787904619
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,6 +4700,7 @@ GameObject:
   - component: {fileID: 994829556}
   - component: {fileID: 994829555}
   - component: {fileID: 994829554}
+  - component: {fileID: 994829557}
   m_Layer: 5
   m_Name: TABLE_BUTTON3
   m_TagString: Untagged
@@ -4660,6 +4833,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994829552}
   m_CullTransparentMesh: 1
+--- !u!114 &994829557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994829552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 994829552}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 994829552}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &998096532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4672,6 +4890,7 @@ GameObject:
   - component: {fileID: 998096536}
   - component: {fileID: 998096535}
   - component: {fileID: 998096534}
+  - component: {fileID: 998096537}
   m_Layer: 5
   m_Name: WIRE_ELECTRICITY_BUTTON
   m_TagString: Untagged
@@ -4804,6 +5023,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998096532}
   m_CullTransparentMesh: 1
+--- !u!114 &998096537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998096532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 998096532}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 998096532}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1003265151
 GameObject:
   m_ObjectHideFlags: 0
@@ -4961,6 +5225,7 @@ GameObject:
   - component: {fileID: 1067035516}
   - component: {fileID: 1067035515}
   - component: {fileID: 1067035514}
+  - component: {fileID: 1067035517}
   m_Layer: 5
   m_Name: COOLER_BUTTON
   m_TagString: Untagged
@@ -5093,6 +5358,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1067035512}
   m_CullTransparentMesh: 1
+--- !u!114 &1067035517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067035512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1067035512}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1067035512}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1078463539
 GameObject:
   m_ObjectHideFlags: 0
@@ -5552,6 +5862,7 @@ GameObject:
   - component: {fileID: 1253009846}
   - component: {fileID: 1253009849}
   - component: {fileID: 1253009850}
+  - component: {fileID: 1253009851}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5699,6 +6010,29 @@ MonoBehaviour:
   maxX: 20
   minY: -20
   maxY: 20
+  borderSwitch: 0
+--- !u!95 &1253009851
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253009845}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d16e8fc879e164f0487c31927638709c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1286916371
 GameObject:
   m_ObjectHideFlags: 0
@@ -7282,6 +7616,7 @@ GameObject:
   - component: {fileID: 1527883922}
   - component: {fileID: 1527883921}
   - component: {fileID: 1527883920}
+  - component: {fileID: 1527883923}
   m_Layer: 5
   m_Name: RAM_BUTTON
   m_TagString: Untagged
@@ -7414,6 +7749,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527883918}
   m_CullTransparentMesh: 1
+--- !u!114 &1527883923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527883918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1527883918}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1527883918}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1529623387 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
@@ -7570,6 +7950,7 @@ GameObject:
   - component: {fileID: 1552157010}
   - component: {fileID: 1552157009}
   - component: {fileID: 1552157008}
+  - component: {fileID: 1552157011}
   m_Layer: 5
   m_Name: TABLE_BUTTON1
   m_TagString: Untagged
@@ -7702,6 +8083,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552157006}
   m_CullTransparentMesh: 1
+--- !u!114 &1552157011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552157006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1552157006}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1552157006}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1585064851
 GameObject:
   m_ObjectHideFlags: 0
@@ -8553,6 +8979,7 @@ GameObject:
   - component: {fileID: 1768488055}
   - component: {fileID: 1768488054}
   - component: {fileID: 1768488053}
+  - component: {fileID: 1768488056}
   m_Layer: 5
   m_Name: HDD_BUTTON
   m_TagString: Untagged
@@ -8685,6 +9112,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768488051}
   m_CullTransparentMesh: 1
+--- !u!114 &1768488056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768488051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.EventTrigger
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleUp
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1768488051}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 123032275}
+          m_TargetAssemblyTypeName: AnimationScript, Assembly-CSharp
+          m_MethodName: ScaleDown
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1768488051}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1860586939
 GameObject:
   m_ObjectHideFlags: 0
@@ -9541,9 +10013,33 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1934509721}
     - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: tiles.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
       propertyPath: ExtraTileInfoBlock
       value: 
       objectReference: {fileID: 601896549}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: 'tiles.Array.data[9]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: 'tiles.Array.data[10]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: 'tiles.Array.data[11]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: 'tiles.Array.data[12]'
+      value: 
+      objectReference: {fileID: 11400000, guid: e3ab4144f2c764ff59d904c1fe989d72, type: 2}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: 'tiles.Array.data[13]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 07083ba3e9ef148b482adc71036d0c13, type: 2}
     - target: {fileID: 9122382944913774013, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
       propertyPath: m_Name
       value: PlaceSystem
@@ -9579,3 +10075,4 @@ SceneRoots:
   - {fileID: 2142900434}
   - {fileID: 229291947}
   - {fileID: 418265783}
+  - {fileID: 123032274}
