@@ -5870,8 +5870,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b888e1c031354464eb0fbf10b2be2742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChecker
-  pscr: {fileID: 1529623387}
   currentLevel: {fileID: 11400000, guid: 32ad74396c8b2437d9fb114b12ddef68, type: 2}
+  pscr: {fileID: 1529623387}
 --- !u!1001 &1404318937
 PrefabInstance:
   m_ObjectHideFlags: 0
