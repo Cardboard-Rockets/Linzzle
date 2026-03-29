@@ -12,6 +12,8 @@ public class MainMenuScript : MonoBehaviour{
     int i;
 
     void Start(){
+        Time.timeScale = 1;
+
         i = Random.Range(1, 11);
         if(i == 7){
             Video.clip = error;
