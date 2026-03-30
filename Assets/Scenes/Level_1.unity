@@ -928,6 +928,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniGames
   tscr: {fileID: 1647554894}
   MiniGamePanel: {fileID: 1721628038}
+  FrontPanel: {fileID: 2010383800}
+  BackPanel: {fileID: 382400787}
   MiniGamesPanelSubImage: {fileID: 1187136344}
   sprites:
   - {fileID: -4999496956982585457, guid: d45e22cee3075f940a83d2c532890ed2, type: 3}
