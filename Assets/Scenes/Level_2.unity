@@ -5965,7 +5965,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1376058761}
         m_TargetAssemblyTypeName: ButtonChecker, Assembly-CSharp
-        m_MethodName: CheckFrontGraph
+        m_MethodName: CheckGraph
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

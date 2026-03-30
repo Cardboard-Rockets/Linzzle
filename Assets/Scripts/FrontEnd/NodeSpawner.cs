@@ -38,8 +38,8 @@ public class NodeSpawner : MonoBehaviour
             case 0: node.Setup(NodeType.Input); break;
             case 1: node.Setup(NodeType.Checker); break;
             case 2: node.Setup(NodeType.If); break;
-            case 3: node.Setup(NodeType.Error); break;
-            case 4: node.Setup(NodeType.Answer); break;
+            case 4: node.Setup(NodeType.Error); break;
+            case 3: node.Setup(NodeType.Answer); break;
         }
     }
 }

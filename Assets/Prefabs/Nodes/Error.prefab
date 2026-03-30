@@ -481,7 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeScript
   id: 0
-  type: 0
+  type: 3
   exits:
   - {fileID: 4245547269785041164}
   outputPorts:
