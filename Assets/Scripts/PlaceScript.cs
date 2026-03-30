@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class PlaceScript : MonoBehaviour
 {
@@ -20,19 +21,29 @@ public class PlaceScript : MonoBehaviour
     public int ymin;
     public int ymax;
 
-
     void Update()
     {
-
         CurrentTile = tiles[tileid];
-        if (Input.GetKeyDown(KeyCode.Q)) { tileid = 0; }
 
-        if(CurrentTile == null){
-            if(Input.GetMouseButtonDown(0)){
+        if (Input.GetKeyDown(KeyCode.Q)) 
+        { 
+            tileid = 0; 
+        }
+
+        // Показ информации о поставленных блоках
+        if (CurrentTile == null)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
                 tscr.ShowTileInfo();
             }
         }
 
+        // Защита от UI только когда пытаемся ставить блок
+        if (CurrentTile != null && EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        // Размещение блоков
         if (CurrentTile != null && isInArea() && MoneySystem.isAvailable())
         {
             if (Input.GetMouseButtonDown(0))
@@ -41,19 +52,22 @@ public class PlaceScript : MonoBehaviour
                 Vector3Int cellpos = GetTilePositionFromMouse();
                 PlaceTileAtMousePosition(cellpos, CurrentTile, tileMap);
 
-                if (tileid != 7 && tileid != 8) { 
+                if (tileid != 7 && tileid != 8) 
+                { 
                     tileid = 0; 
                 }
             }
+
             if ((tileid == 7 || tileid == 8) && Input.GetMouseButtonUp(0))
             {
-               tileid = 0;
+                tileid = 0;
             }
 
             physicScript.RecalculateSystem();
         }
     }
 
+    // === Остальные методы без изменений ===
     public Vector3Int GetTilePositionFromMouse()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -64,7 +78,7 @@ public class PlaceScript : MonoBehaviour
     {
         if (Map.GetTile(p) == null)
         {
-            tscr.HideInfoBlocks();// Скрываем информационные блоки после установки тайла
+            tscr.HideInfoBlocks();
             Map.SetTile(p, tile);
             if (Map.GetTile(p) != null)
             {
@@ -77,8 +91,6 @@ public class PlaceScript : MonoBehaviour
     {
         Vector3Int cellpos = GetTilePositionFromMouse();
         return cellpos.x >= xmin && cellpos.x <= xmax &&
-                cellpos.y >= ymin && cellpos.y <= ymax;
+               cellpos.y >= ymin && cellpos.y <= ymax;
     }
-
-    
 }

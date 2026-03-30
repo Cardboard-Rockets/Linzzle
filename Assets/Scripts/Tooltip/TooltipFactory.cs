@@ -15,21 +15,25 @@ public static class TooltipFactory
         rect.pivot = new Vector2(0f, 1f);
         rect.sizeDelta = new Vector2(260, 120);
 
+        // Отключаем блокировку мыши
+        CanvasGroup cg = root.AddComponent<CanvasGroup>();
+        cg.blocksRaycasts = false;
+        cg.interactable = false;
+
         Image bg = root.AddComponent<Image>();
         bg.color = new Color(0.08f, 0.08f, 0.10f, 0.95f);
+        bg.raycastTarget = false;
 
         Outline outline = root.AddComponent<Outline>();
         outline.effectColor = new Color(0.4f, 0.4f, 0.5f, 0.6f);
         outline.effectDistance = new Vector2(1.5f, -1.5f);
 
-        var name  = CreateText(root, "NameText", 20, FontStyles.Bold,   new Vector2(12, -14));
-        var price = CreateText(root, "PriceText",16, FontStyles.Normal, new Vector2(12, -42));
-        var desc  = CreateText(root, "DescText", 13, FontStyles.Italic, new Vector2(12, -66));
-
-        desc.color = new Color(0.72f, 0.72f, 0.78f, 1f);
+        var nameText  = CreateText(root, "NameText", 20, FontStyles.Bold,   new Vector2(12, -14));
+        var priceText = CreateText(root, "PriceText",16, FontStyles.Normal, new Vector2(12, -42));
+        var descText  = CreateText(root, "DescText", 13, FontStyles.Italic, new Vector2(12, -66));
 
         TooltipSystem system = root.AddComponent<TooltipSystem>();
-        system.SetupReferences(root, name, price, desc, canvas);
+        system.SetupReferences(root, nameText, priceText, descText, canvas);
     }
 
     private static TextMeshProUGUI CreateText(GameObject parent, string name, float size, FontStyles style, Vector2 pos)
@@ -48,7 +52,7 @@ public static class TooltipFactory
         tmp.fontSize = size;
         tmp.fontStyle = style;
         tmp.color = Color.white;
-        tmp.text = "";
+        tmp.raycastTarget = false;
 
         return tmp;
     }
