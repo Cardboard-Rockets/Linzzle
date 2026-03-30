@@ -7,7 +7,13 @@ public class GraphScript : MonoBehaviour
     private int idCounter;
     public List<NodeScript> nodes = new List<NodeScript>();
 
-    private void Awake() => Instance = this;
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
 
     public int GetNextID() => ++idCounter;
 
