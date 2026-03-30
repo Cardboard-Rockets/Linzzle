@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7622748382512034489}
-  m_Layer: 0
+  - component: {fileID: 4422081439040206502}
+  - component: {fileID: 8719833625108007138}
+  m_Layer: 5
   m_Name: IfNode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7622748382512034489
-Transform:
+--- !u!224 &4422081439040206502
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2872209217056070550}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,6 +32,19 @@ Transform:
   - {fileID: 8862656429501723999}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 360, y: 130}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8719833625108007138
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2872209217056070550}
+  m_CullTransparentMesh: 1
 --- !u!1 &2915338370666836660
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,14 +241,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4245547269785041164}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NodeScript, Assembly-CSharp
         m_MethodName: StartConnection
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -436,14 +449,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4245547269785041164}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: NodeScript, Assembly-CSharp
         m_MethodName: StartConnection
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -613,13 +626,13 @@ RectTransform:
   m_GameObject: {fileID: 7997588400496015641}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8915223, y: 1.8915223, z: 1.8915223}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7957745894791356252}
   - {fileID: 4463145243791026985}
   - {fileID: 6863338450975622796}
-  m_Father: {fileID: 7622748382512034489}
+  m_Father: {fileID: 4422081439040206502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -677,7 +690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeScript
   id: 0
-  type: 0
+  type: 2
   exits:
   - {fileID: 4245547269785041164}
   outputPorts:

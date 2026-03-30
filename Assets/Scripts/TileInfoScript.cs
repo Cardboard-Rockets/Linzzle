@@ -184,6 +184,8 @@ public class TileInfoScript : MonoBehaviour
         case 9: data.desc = "" ; data.name = "Сервер"; break;
         case 10: data.desc = "" ; data.name = "Front-End модуль"; break;
         case 11: data.desc = "" ; data.name = "Back-End модуль"; break;
+        case 12: data.desc = "" ; data.name = "Провод для данных"; break;
+        case 13: data.desc = "" ; data.name = "Провод для данных"; break;
     }
     return data;
 }

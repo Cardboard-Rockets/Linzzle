@@ -17,11 +17,13 @@ public class ReworkedCameraSystem : MonoBehaviour
     [SerializeField] float maxX;
     [SerializeField] float minY;
     [SerializeField] float maxY;
+    public bool borderSwitch;
 
     Camera cam;
 
     void Start()
     {
+        borderSwitch = false;
         cam = Camera.main;
     }
 
@@ -62,7 +64,9 @@ public class ReworkedCameraSystem : MonoBehaviour
         }
         transform.position += move * speed * Time.deltaTime;
 
+        if(borderSwitch){
         CameraBorder();
+        }
     }
 
     void CameraBorder()

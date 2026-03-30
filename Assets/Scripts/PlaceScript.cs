@@ -11,6 +11,7 @@ public class PlaceScript : MonoBehaviour
     
     public TileBase CurrentTile;
     [SerializeField] PhysicsSystem_Script physicScript;
+    [SerializeField] AudioManager audioManager;
     [SerializeField] TileInfoScript tscr;
 
     [Header("Building area coordinates")]
@@ -36,6 +37,7 @@ public class PlaceScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                audioManager.PlayPlaceSound();
                 Vector3Int cellpos = GetTilePositionFromMouse();
                 PlaceTileAtMousePosition(cellpos, CurrentTile, tileMap);
 

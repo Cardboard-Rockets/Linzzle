@@ -11,9 +11,23 @@ public class NodeSpawner : MonoBehaviour
 
         GameObject nodeObject = Instantiate(nodes[index], parent);
         RectTransform rect = nodeObject.GetComponent<RectTransform>();
-        rect.anchoredPosition = new Vector2(480, 240);
+
+        if (rect != null)
+        {
+            rect.anchoredPosition = new Vector2(480, 240);
+        }
+        else
+        {
+            Debug.LogError($"Префаб {nodes[index].name} не имеет RectTransform! Открой префаб и проверь корневой объект.");
+        }
 
         NodeScript node = nodeObject.GetComponent<NodeScript>();
+        if (node == null)
+        {
+            Debug.LogError($"Префаб {nodes[index].name} не имеет компонента NodeScript!");
+            return;
+        }
+
         SetupNode(node, index);
     }
 
@@ -24,8 +38,8 @@ public class NodeSpawner : MonoBehaviour
             case 0: node.Setup(NodeType.Input); break;
             case 1: node.Setup(NodeType.Checker); break;
             case 2: node.Setup(NodeType.If); break;
-            case 3: node.Setup(NodeType.Error); break;
-            case 4: node.Setup(NodeType.Answer); break;
+            case 4: node.Setup(NodeType.Error); break;
+            case 3: node.Setup(NodeType.Answer); break;
         }
     }
 }

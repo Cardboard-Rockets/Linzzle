@@ -27,6 +27,7 @@ public class PhysicsSystem_Script : MonoBehaviour
     [SerializeField] int Type2Endure;
     [SerializeField] int Type3Endure;
     [SerializeField] float Timer1 = 0;
+    [SerializeField] AudioManager audioManager;
     
 
     [Header("Attack")]
@@ -62,6 +63,7 @@ public class PhysicsSystem_Script : MonoBehaviour
     if (Timer1 >= 3f)
     {
         isAttacking = false;
+        audioManager.StopPlaying();
         CheckAttack();
     }
 }
@@ -158,6 +160,7 @@ public class PhysicsSystem_Script : MonoBehaviour
 
     public void Attack(){
         //anim.play("Shaking");
+        audioManager.PlayWorkingSound();
         isAttacking = true;
     }
 
@@ -169,6 +172,7 @@ public class PhysicsSystem_Script : MonoBehaviour
             Timer1 = 0;
          }
          else{
+            audioManager.PlayExplodeSound();
             Debug.Log("You LOSE!");
             isLose = true;
             Timer1 = 0;

@@ -6,6 +6,8 @@ public class MiniGames : MonoBehaviour
 {
     [SerializeField] TileInfoScript tscr;
     [SerializeField] GameObject MiniGamePanel;
+    [SerializeField] GameObject FrontPanel;
+    [SerializeField] GameObject BackPanel;
     [SerializeField] Image MiniGamesPanelSubImage; 
     public Sprite[] sprites = new Sprite[2]; 
 
@@ -17,8 +19,18 @@ public class MiniGames : MonoBehaviour
     public void ShowPanel()
     {
         MiniGamePanel.SetActive(true);
-        if(tscr.isFEorBE()=="Back"){SetSpriteBack();}
-         if(tscr.isFEorBE()=="Front"){SetSpriteFront();}
+        if(tscr.isFEorBE()=="Back"){
+            SetSpriteBack();
+            BackPanel.SetActive(true);
+            FrontPanel.SetActive(false);
+            }
+
+         if(tscr.isFEorBE()=="Front")
+         {
+            SetSpriteFront();
+            BackPanel.SetActive(false);
+            FrontPanel.SetActive(true);
+         }
     }
 
     public void SetSpriteFront()
