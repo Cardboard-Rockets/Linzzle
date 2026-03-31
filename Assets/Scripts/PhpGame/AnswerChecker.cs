@@ -16,6 +16,20 @@ public class AnswerChecker : MonoBehaviour
         translator = new PHPTranslatorScript();
     }
 
+  void Update()
+{
+    if (inputField != null && inputField.isFocused)
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            int pos = inputField.caretPosition;
+
+            inputField.text = inputField.text.Insert(pos, "    "); // 4 пробела
+            inputField.caretPosition = pos + 4;
+        }
+    }
+}
+
     public void CheckAnswer()
 {
     translator = new PHPTranslatorScript();
