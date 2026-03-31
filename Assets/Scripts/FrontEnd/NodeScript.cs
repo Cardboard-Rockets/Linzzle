@@ -26,22 +26,23 @@ public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     private void Awake()
     {
-        GraphScript.Instance.RegisterNode(this);
+        rectTransform = GetComponent<RectTransform>();
+        canvas = GetComponentInParent<Canvas>();
 
         for (int i = 0; i < outputPorts.Count; i++)
         {
             int index = i;
             if (outputPorts[i].button != null)
-            {
                 outputPorts[i].button.onClick.AddListener(() => StartConnection(index));
-            }
         }
     }
 
     private void Start()
     {
-        rectTransform = GetComponent<RectTransform>();
-        canvas = GetComponentInParent<Canvas>();
+        if (GraphScript.Instance != null)
+            GraphScript.Instance.RegisterNode(this);
+        else
+            Debug.LogError($"GraphScript не найден! Нода: {name}");
     }
 
     public void Setup(NodeType nodeType)
@@ -51,7 +52,6 @@ public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             id = GraphScript.Instance.GetNextID();
     }
 
-    // Метод для кнопки UnityEvent: принимает int индекс порта
     public void StartConnection(int portIndex)
     {
         if (portIndex < 0 || portIndex >= outputPorts.Count)

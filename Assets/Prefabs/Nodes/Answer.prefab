@@ -165,7 +165,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4245547269785041164}
         m_TargetAssemblyTypeName: NodeScript, Assembly-CSharp
         m_MethodName: StartConnection
         m_Mode: 3
