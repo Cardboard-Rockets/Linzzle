@@ -502,6 +502,34 @@ PrefabInstance:
       propertyPath: money_text
       value: 
       objectReference: {fileID: 484163198}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: startingPrices.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: 'startingPrices.Array.data[9]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: 'startingPrices.Array.data[10]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: 'startingPrices.Array.data[11]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: 'startingPrices.Array.data[12]'
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: 'startingPrices.Array.data[13]'
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: 'startingPrices.Array.data[14]'
+      value: 1500
+      objectReference: {fileID: 0}
     - target: {fileID: 4157135127903569529, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.12953
