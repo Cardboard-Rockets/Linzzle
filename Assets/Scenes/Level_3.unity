@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1243,6 +1243,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MiniGames
   tscr: {fileID: 1647554894}
   MiniGamePanel: {fileID: 1721628038}
+  FrontPanel: {fileID: 0}
+  BackPanel: {fileID: 0}
   MiniGamesPanelSubImage: {fileID: 1187136344}
   sprites:
   - {fileID: -4999496956982585457, guid: d45e22cee3075f940a83d2c532890ed2, type: 3}
@@ -1420,7 +1422,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01001, y: -0.34538}
+  m_AnchoredPosition: {x: 115.73, y: -0.34538}
   m_SizeDelta: {x: 1920.3, y: 221.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358237803
@@ -5740,7 +5742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -881.1486, y: 0.000029564}
+  m_AnchoredPosition: {x: -796, y: -1.2296}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221807447
@@ -8163,7 +8165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -778.8516, y: 0.000029564}
+  m_AnchoredPosition: {x: -696, y: -1.2296}
   m_SizeDelta: {x: 4.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585064853
