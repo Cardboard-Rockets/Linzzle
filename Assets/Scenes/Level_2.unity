@@ -2103,6 +2103,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
+      propertyPath: isBackGood
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: Type1Amount
       value: 0
       objectReference: {fileID: 0}
@@ -6062,8 +6066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b888e1c031354464eb0fbf10b2be2742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChecker
-  currentLevel: {fileID: 11400000, guid: 32ad74396c8b2437d9fb114b12ddef68, type: 2}
   pscr: {fileID: 1529623387}
+  filename: level2_graph
 --- !u!1001 &1404318937
 PrefabInstance:
   m_ObjectHideFlags: 0

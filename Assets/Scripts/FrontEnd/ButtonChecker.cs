@@ -2,8 +2,29 @@ using UnityEngine;
 
 public class ButtonChecker : MonoBehaviour
 {
-    [SerializeField] private LevelData currentLevel;
+    private LevelData currentLevel;
     [SerializeField] private PhysicsSystem_Script pscr;
+    [SerializeField] string filename;
+
+    private void Awake()
+    {
+        LoadLevel(filename);
+    }
+
+    void LoadLevel(string levelName)
+    {
+        TextAsset jsonFile = Resources.Load<TextAsset>(levelName);
+
+        if (jsonFile == null)
+        {
+            Debug.LogError("JSON не найден!");
+            return;
+        }
+
+        currentLevel = JsonUtility.FromJson<LevelData>(jsonFile.text);
+
+        Debug.Log("Level загружен: " + levelName);
+    }
 
     public void CheckGraph()
     {
