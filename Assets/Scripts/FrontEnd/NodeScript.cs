@@ -13,7 +13,7 @@ public class Port
     public PortType type = PortType.Default;
 }
 
-public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
+public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
@@ -70,11 +70,10 @@ public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             exits.Add(target);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (!isDragging)
-            NodeConnector.Instance.EndConnection(this);
-    }
+    public void OnPointerDown(PointerEventData eventData)
+{
+    NodeConnector.Instance.EndConnection(this);
+}
 
     public void OnBeginDrag(PointerEventData eventData) => isDragging = true;
 
