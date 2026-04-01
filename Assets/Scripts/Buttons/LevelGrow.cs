@@ -9,6 +9,7 @@ public class GlowOutlineCustom : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public float speed = 5f;
     public float maxAlpha = 0.7f;
     public Color glowColor = Color.yellow;
+    [SerializeField] Sprite image;
 
     private GameObject glowObject;
     private Image glowImage;
@@ -34,12 +35,8 @@ public class GlowOutlineCustom : MonoBehaviour, IPointerEnterHandler, IPointerEx
         glowImage = glowObject.AddComponent<Image>();
         glowImage.raycastTarget = false;
         glowImage.color = new Color(glowColor.r, glowColor.g, glowColor.b, 0);
-
-        Image originalImage = GetComponent<Image>();
-        if (originalImage != null && originalImage.sprite != null)
-        {
-            glowImage.sprite = originalImage.sprite;
-        }
+        glowImage.sprite = image;
+      
 
         RectTransform rect = glowImage.GetComponent<RectTransform>();
         rect.sizeDelta = mainRect.sizeDelta + new Vector2(glowOffset * 2, glowOffset * 2);
