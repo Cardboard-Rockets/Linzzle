@@ -484,7 +484,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 3
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -4317,7 +4317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueScriptTwo
   ps: {fileID: 1529623387}
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 1764704742}
   DialogueBox: {fileID: 113217119}
   text: {fileID: 1362611677}
   LensImage: {fileID: 675438187}
@@ -6876,6 +6876,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5383155227538979133, guid: 6a7b713179d9449c28b8e0f10b4c7204, type: 3}
   m_PrefabInstance: {fileID: 1404318937}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1764704742 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2689681970273647067, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
+  m_PrefabInstance: {fileID: 481816645}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d140c2efe40f4407c9ff78f063fde247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
 --- !u!1 &1794758889
 GameObject:
   m_ObjectHideFlags: 0
@@ -6947,7 +6958,7 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
