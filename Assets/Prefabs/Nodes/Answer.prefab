@@ -164,19 +164,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6974515128428290509}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NodeScript, Assembly-CSharp
-        m_MethodName: StartConnection
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7602653716091982084
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +397,7 @@ MonoBehaviour:
   exits:
   - {fileID: 4245547269785041164}
   outputPorts:
-  - button: {fileID: 6073052300392117217}
+  - button: {fileID: 8568168290427247191}
     type: 0
 --- !u!1 &8358896722623269695
 GameObject:

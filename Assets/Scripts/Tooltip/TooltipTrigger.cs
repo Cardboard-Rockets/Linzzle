@@ -7,7 +7,7 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public int tileid;
     public string description;
 
-    public void OnPointerEnter(PointerEventData _)
+    public void OnPointerEnter(PointerEventData eventData)
     {
         int price = (MoneySystem.price != null && tileid >= 0 && tileid < MoneySystem.price.Length)
             ? MoneySystem.price[tileid]
@@ -16,7 +16,7 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         TooltipSystem.Show(itemName, price, description);
     }
 
-    public void OnPointerExit(PointerEventData _)
+    public void OnPointerExit(PointerEventData eventData)
     {
         TooltipSystem.Hide();
     }

@@ -21,7 +21,7 @@ public class NodeSpawner : MonoBehaviour
             Debug.LogError($"Префаб {nodes[index].name} не имеет RectTransform! Открой префаб и проверь корневой объект.");
         }
 
-        NodeScript node = nodeObject.GetComponent<NodeScript>();
+        NodeScript node = nodeObject.GetComponentInChildren<NodeScript>();
         if (node == null)
         {
             Debug.LogError($"Префаб {nodes[index].name} не имеет компонента NodeScript!");
@@ -38,8 +38,8 @@ public class NodeSpawner : MonoBehaviour
             case 0: node.Setup(NodeType.Input); break;
             case 1: node.Setup(NodeType.Checker); break;
             case 2: node.Setup(NodeType.If); break;
-            case 4: node.Setup(NodeType.Error); break;
             case 3: node.Setup(NodeType.Answer); break;
+            case 4: node.Setup(NodeType.Error); break;
         }
     }
 }

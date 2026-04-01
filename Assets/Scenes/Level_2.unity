@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2103,6 +2103,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
+      propertyPath: isBackGood
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: Type1Amount
       value: 0
       objectReference: {fileID: 0}
@@ -2431,8 +2435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnswerChecker
   inputField: {fileID: 1794758890}
   pscr: {fileID: 1529623387}
-  correctAnswer: "\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C,
-    \u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440"
+  correctAnswer: admin
   PostVar: name
   PostAns: admin
 --- !u!224 &611506731
@@ -3798,6 +3801,7 @@ GameObject:
   - component: {fileID: 836788365}
   - component: {fileID: 836788370}
   - component: {fileID: 836788368}
+  - component: {fileID: 836788371}
   m_Layer: 5
   m_Name: FrontBg
   m_TagString: Untagged
@@ -3914,6 +3918,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GraphScript
   nodes: []
+--- !u!114 &836788371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836788363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f630c2a33b2421aa36e320e2690138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BackgroundClickCatcher
 --- !u!1 &891480984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4818,7 +4834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -881.1486, y: 0.000029564}
+  m_AnchoredPosition: {x: -787, y: 0.000029564}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221807447
@@ -6049,8 +6065,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b888e1c031354464eb0fbf10b2be2742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonChecker
-  currentLevel: {fileID: 11400000, guid: 32ad74396c8b2437d9fb114b12ddef68, type: 2}
   pscr: {fileID: 1529623387}
+  filename: level2_graph
 --- !u!1001 &1404318937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6415,7 +6431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -778.8516, y: 0.000029564}
+  m_AnchoredPosition: {x: -686, y: 0.000029564}
   m_SizeDelta: {x: 4.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1585064853

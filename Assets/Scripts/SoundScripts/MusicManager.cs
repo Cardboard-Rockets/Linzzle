@@ -13,7 +13,6 @@ public class MusicManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
-            CheckSceneAndMuteMusic();
         }
         else
         {
@@ -29,9 +28,20 @@ public class MusicManager : MonoBehaviour
     void CheckSceneAndMuteMusic()
     {
         string currentSceneName = SceneManager.GetActiveScene().name;
-        if(currentSceneName!="MainMenu" && currentSceneName != "LevelSelect")
+
+        if (currentSceneName == "MainMenu" || currentSceneName == "LevelSelect")
         {
-            Destroy(gameObject);
+            if (!src.isPlaying)
+                src.Play();
         }
+        else
+        {
+            src.Stop();
+        }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

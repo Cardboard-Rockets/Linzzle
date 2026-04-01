@@ -24,4 +24,9 @@ public class MainMenu_Buttons_Script : MonoBehaviour
   {
     SceneManager.LoadScene("LevelSelect");
   }
+
+  public void Quit()
+  {
+    Application.Quit();
+  }
 }
