@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 522133266}
   - component: {fileID: 522133265}
   - component: {fileID: 522133264}
+  - component: {fileID: 522133267}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -263,6 +264,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522133261}
   m_CullTransparentMesh: 1
+--- !u!114 &522133267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522133261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7573a98d1c671784490bf92a9a3ef5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlowOutlineCustom
+  glowOffset: 10
+  speed: 5
+  maxAlpha: 0.7
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &708981012
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,6 +475,7 @@ GameObject:
   - component: {fileID: 779730505}
   - component: {fileID: 779730504}
   - component: {fileID: 779730503}
+  - component: {fileID: 779730506}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -590,6 +608,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779730500}
   m_CullTransparentMesh: 1
+--- !u!114 &779730506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779730500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7573a98d1c671784490bf92a9a3ef5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlowOutlineCustom
+  glowOffset: 10
+  speed: 5
+  maxAlpha: 0.7
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &803204575
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,6 +1143,8 @@ GameObject:
   - component: {fileID: 1374886826}
   - component: {fileID: 1374886825}
   - component: {fileID: 1374886824}
+  - component: {fileID: 1374886827}
+  - component: {fileID: 1374886828}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1241,6 +1277,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374886821}
   m_CullTransparentMesh: 1
+--- !u!114 &1374886827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374886821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70561b599bebc1e45a3ed0e7103d88d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelHighlight
+  enableGlow: 1
+  glowSpeed: 2
+  minAlpha: 0.3
+  maxAlpha: 1
+  glowColor: {r: 0.5471698, g: 0.4532218, b: 0.4532218, a: 1}
+  glowObject: {fileID: 0}
+--- !u!114 &1374886828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374886821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7573a98d1c671784490bf92a9a3ef5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GlowOutlineCustom
+  glowOffset: 10
+  speed: 5
+  maxAlpha: 0.7
+  glowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1001 &2081348321
 PrefabInstance:
   m_ObjectHideFlags: 0
