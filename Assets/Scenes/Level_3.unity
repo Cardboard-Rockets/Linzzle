@@ -777,6 +777,10 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: 'startingPrices.Array.data[8]'
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
       propertyPath: 'startingPrices.Array.data[9]'
       value: 0
       objectReference: {fileID: 0}
@@ -3854,6 +3858,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675438185}
   m_CullTransparentMesh: 1
+--- !u!1 &727858861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5984591545024701334, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+  m_PrefabInstance: {fileID: 2144291547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &727858862 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5090783736321754613, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+  m_PrefabInstance: {fileID: 2144291547}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &727858863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727858861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92709f3498759c745b5df22d2d95fd50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BaseWire
+  place: {fileID: 2144291548}
+  lastDirection: 0
+  isDrawing: 0
+  lastPlacedPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  endPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &735462615
 GameObject:
   m_ObjectHideFlags: 0
@@ -6233,6 +6265,66 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &996196091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 996196092}
+  - component: {fileID: 996196093}
+  m_Layer: 0
+  m_Name: WireBlue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &996196092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996196091}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.68152, y: 1.1476098, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 727858862}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &996196093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996196091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b9ed719c3d60c4eb4542b96febbe0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireSpawn
+  place: {fileID: 2144291548}
+  lastDirection: 0
+  isDrawing: 0
+  lastPlacedPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  endPosition: {x: 0, y: 0, z: 0}
+  tile:
+  - {fileID: 11400000, guid: bab4d687463a54a9bba80762192f0a96, type: 2}
+  - {fileID: 11400000, guid: e3ab4144f2c764ff59d904c1fe989d72, type: 2}
+  - {fileID: 11400000, guid: 07083ba3e9ef148b482adc71036d0c13, type: 2}
+  tileMap: {fileID: 174494949}
+  serverTiles: {fileID: 11400000, guid: 74f95595abf944b27815d6269c84d25f, type: 2}
+  backTiles: {fileID: 11400000, guid: bcd72788cc824405eab0c33c9a4fbe0c, type: 2}
+  frontTiles: {fileID: 11400000, guid: c295cac9892fb4193ab2d7dbfb24d30f, type: 2}
+  isConnectedToBack: 0
+  isConnectedToFront: 0
 --- !u!1 &998096532
 GameObject:
   m_ObjectHideFlags: 0
@@ -10534,6 +10626,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622093060}
   m_CullTransparentMesh: 1
+--- !u!1 &1638019464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638019465}
+  - component: {fileID: 1638019466}
+  m_Layer: 0
+  m_Name: WireRed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1638019465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638019464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 727858862}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1638019466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638019464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c585741a8c3c84e8991108a9674ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireSpawnRed
+  place: {fileID: 2144291548}
+  lastDirection: 0
+  isDrawing: 0
+  lastPlacedPosition: {x: 0, y: 0, z: 0}
+  startPosition: {x: 0, y: 0, z: 0}
+  endPosition: {x: 0, y: 0, z: 0}
+  tile:
+  - {fileID: 11400000, guid: cb8d08927d2f0410faff94dc86fa43ff, type: 2}
+  - {fileID: 11400000, guid: 23e2650c68603479eb2d03f46355a270, type: 2}
+  - {fileID: 11400000, guid: ade582653d4cd4444a22069d3f760520, type: 2}
+  tileMap: {fileID: 174494949}
+  sourceTile: {fileID: 11400000, guid: 396052b4345e84c5aa7939a73c7e9a1e, type: 2}
+  serverTile: {fileID: 11400000, guid: 74f95595abf944b27815d6269c84d25f, type: 2}
+  backTile: {fileID: 11400000, guid: bcd72788cc824405eab0c33c9a4fbe0c, type: 2}
+  frontTile: {fileID: 11400000, guid: c295cac9892fb4193ab2d7dbfb24d30f, type: 2}
+  isConnectedToServer: 0
+  isConnectedToBack: 0
+  isConnectedToFront: 0
 --- !u!114 &1647554894 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7700042176407066544, guid: 5cf486526bdaa444984a263142d4bb25, type: 3}
@@ -12574,10 +12728,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlaceSystem
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 658753175847945707, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5090783736321754613, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 996196092}
+    - targetCorrespondingSourceObject: {fileID: 5090783736321754613, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1638019465}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5984591545024701334, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 727858863}
   m_SourcePrefab: {fileID: 100100000, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
 --- !u!114 &2144291548 stripped
 MonoBehaviour:
