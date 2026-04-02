@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public enum NodeType { Input, Checker, If, Error, Answer }
+public enum NodeType { Input, Checker, If, Error, Answer, Length }
 public enum PortType { Default, True, False }
 
 [System.Serializable]

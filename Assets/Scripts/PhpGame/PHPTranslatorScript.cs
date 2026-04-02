@@ -94,7 +94,6 @@ public class PHPTranslatorScript
         }
     }
 
-    // ===== BLOCK FINDER =====
     int FindBlockEnd(string[] lines, int start)
     {
         int depth = 0;
@@ -128,23 +127,44 @@ public class PHPTranslatorScript
         if (expr.StartsWith("\"") && expr.EndsWith("\""))
             return expr.Substring(1, expr.Length - 2);
 
+        // strlen()
+        if (expr.StartsWith("strlen"))
+        {
+            var inside = expr.Substring(7).Trim('(', ')', ' ');
+            var val = Eval(inside);
+
+            return val != null ? val.ToString().Length : 0;
+        }
+
         // isset
         if (expr.StartsWith("isset"))
         {
             var inside = expr.Substring(6).Trim('(', ')', ' ');
 
-            // isset($_POST['x'])
             if (inside.StartsWith("$_POST"))
             {
                 var key = inside.Substring(inside.IndexOf('[') + 2);
                 key = key.Substring(0, key.IndexOf('\''));
-
                 return post.ContainsKey(key);
             }
 
-            // isset($a)
             var name = inside.Replace("$", "");
             return vars.ContainsKey(name);
+        }
+
+        // конкатенация .
+        if (expr.Contains("."))
+        {
+            var parts = expr.Split('.');
+            string result = "";
+
+            foreach (var part in parts)
+            {
+                var val = Eval(part);
+                result += val?.ToString() ?? "";
+            }
+
+            return result;
         }
 
         // ||
@@ -210,7 +230,6 @@ public class PHPTranslatorScript
         return expr;
     }
 
-    // ===== CONDITION =====
     bool EvalCondition(string line)
     {
         var condition = line.Substring(line.IndexOf('(') + 1);

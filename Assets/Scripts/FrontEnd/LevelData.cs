@@ -4,13 +4,13 @@ using UnityEngine;
 [System.Serializable]
 public class NodeConnection
 {
-    public NodeType fromType; 
+    public NodeType fromType;
     public PortType fromPort;
     public NodeType toType;
 }
 
-[CreateAssetMenu(fileName = "LevelData", menuName = "Graph/LevelData")]
-public class LevelData : ScriptableObject
+[System.Serializable]
+public class LevelData
 {
-    public List<NodeConnection> correctConnections = new List<NodeConnection>();
+    public List<NodeConnection> correctConnections;
 }
