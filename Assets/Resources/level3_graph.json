@@ -1,0 +1,29 @@
+{
+  "correctConnections": [
+    {
+      "fromType": 0,
+      "fromPort": 0,
+      "toType": 1
+    },
+    {
+      "fromType": 1,
+      "fromPort": 0,
+      "toType": 5
+    },
+    {
+      "fromType": 5,
+      "fromPort": 0,
+      "toType": 2
+    },
+    {
+        "fromType": 2,
+        "fromPort": 0,
+        "toType": 3
+    },
+    {
+        "fromType": 2,
+        "fromPort": 1,
+        "toType": 3
+    }
+  ]
+}

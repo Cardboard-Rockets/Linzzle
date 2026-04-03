@@ -7,6 +7,7 @@ public class TileInfoScript : MonoBehaviour
     [SerializeField] TileBase FE;
     [SerializeField] TileBase BE;
     [SerializeField] TileBase S;
+    [SerializeField] TileBase Elec;
     [SerializeField] GameObject ExtraTileInfoBlock;
     [SerializeField] GameObject TileInfoBlock;
     [SerializeField] GameObject ExBu;
@@ -144,7 +145,7 @@ public class TileInfoScript : MonoBehaviour
     TileData data = new TileData();
     Vector3Int tp = pscr.GetTilePositionFromMouse();
     TileBase clickedTile = pscr.tileMap.GetTile(tp);
-    int j = 0;
+    int j = 14;
     
     if (clickedTile == S)
     {
@@ -158,6 +159,10 @@ public class TileInfoScript : MonoBehaviour
     {
         j = 11;
     }
+    else if (clickedTile == Elec)
+        {
+            j=0;
+        }
     else
     {
         for (int i = 0; i < pscr.tiles.Length; i++)
@@ -186,6 +191,15 @@ public class TileInfoScript : MonoBehaviour
         case 11: data.desc = "" ; data.name = "Back-End модуль"; break;
         case 12: data.desc = "" ; data.name = "Провод для данных"; break;
         case 13: data.desc = "" ; data.name = "Провод для данных"; break;
+        case 14: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 15: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 16: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 17: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 18: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 19: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 20: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 21: data.desc = "" ; data.name = "Провод электропитания"; break;
+        case 22: data.desc = "" ; data.name = "Провод электропитания"; break;
     }
     return data;
 }
