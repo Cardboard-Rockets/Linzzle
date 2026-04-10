@@ -7699,6 +7699,7 @@ GameObject:
   - component: {fileID: 1253009849}
   - component: {fileID: 1253009850}
   - component: {fileID: 1253009851}
+  - component: {fileID: 1253009852}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -7836,16 +7837,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b672c00da72e9492bbbe39654c95e28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReworkedCameraSystem
-  speed: 5
-  leftBorder: 20
-  rightBorder: 20
-  topBorder: 120
-  bottomBorder: 150
-  verticalDelay: 0.25
   minX: -20
   maxX: 20
   minY: -15
-  maxY: 5
+  maxY: 6
   borderSwitch: 0
 --- !u!95 &1253009851
 Animator:
@@ -7869,6 +7864,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1253009852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253009845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a169dbb50a27b4a57b0cb898c66f7d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RTS_Camera
+  speed: 15
+  dragSpeed: 0.35
+  placeScript: {fileID: 2144291548}
+  minX: -20
+  maxX: 20
+  minY: -15
+  maxY: 6
 --- !u!1 &1286916371
 GameObject:
   m_ObjectHideFlags: 0
