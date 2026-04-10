@@ -28,7 +28,6 @@ public class PhysicsSystem_Script : MonoBehaviour
     [SerializeField] int Type3Endure;
     [SerializeField] float Timer1 = 0;
     [SerializeField] AudioManager audioManager;
-    
 
     [Header("Attack")]
     [SerializeField] public int RamNeed;
