@@ -2773,6 +2773,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: fe5462607bd8c4b6483ed461503369a3, type: 2}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
+      propertyPath: wsb
+      value: 
+      objectReference: {fileID: 996196093}
+    - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
+      propertyPath: wsr
+      value: 
+      objectReference: {fileID: 1638019466}
+    - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: Back
       value: 
       objectReference: {fileID: 11400000, guid: bcd72788cc824405eab0c33c9a4fbe0c, type: 2}
@@ -6215,7 +6223,6 @@ MonoBehaviour:
   MemoryInfo: {fileID: 1434096298}
   LevelInfo: {fileID: 1491268953}
   HintBlock: {fileID: 528209622}
-  HintLevelInfo: {fileID: 966729808}
 --- !u!1 &966729806
 GameObject:
   m_ObjectHideFlags: 0
