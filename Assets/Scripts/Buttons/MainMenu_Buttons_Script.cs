@@ -29,4 +29,9 @@ public class MainMenu_Buttons_Script : MonoBehaviour
   {
     Application.Quit();
   }
+
+  public void OpenGitHub()
+  {
+    Application.OpenURL("https://github.com/Cardboard-Rockets/Linzzle");
+  }
 }
