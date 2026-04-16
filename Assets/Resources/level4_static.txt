@@ -1,0 +1,17 @@
+    namespace services;
+    class Connect{
+        public static function connect(){
+            $db = mysqli_connect(
+                '142.164.22.190:3306',
+                'root',
+                'root',
+                'database'
+            );
+            if(!$db){
+                die ('Connection error');
+            }
+            else{
+                return $db;
+            }
+        }
+    }
