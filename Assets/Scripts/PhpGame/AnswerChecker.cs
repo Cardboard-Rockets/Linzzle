@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using System.Diagnostics;
 
 public class AnswerChecker : MonoBehaviour
 {
@@ -49,8 +48,8 @@ public class AnswerChecker : MonoBehaviour
             }
             else
             {
-                string correctCode = Normalize(staticCode.text);
-                string userCode = Normalize(inputField.text);
+                string correctCode = staticCode.text.ToLower().Trim();
+                string userCode = inputField.text.ToLower().Trim();
 
                 if (userCode.Equals(correctCode))
                 {
