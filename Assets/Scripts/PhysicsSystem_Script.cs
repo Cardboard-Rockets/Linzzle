@@ -42,7 +42,7 @@ public class PhysicsSystem_Script : MonoBehaviour
     [SerializeField] public bool isWin;
     [SerializeField] public bool isBackGood;
     [SerializeField] public bool isFrontGood;
-    [SerializeField] WireSpawn wsb;
+    [SerializeField] WireSpawnBlue wsb;
     [SerializeField] WireSpawnRed wsr;
 
 

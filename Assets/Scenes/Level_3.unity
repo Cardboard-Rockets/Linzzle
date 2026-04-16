@@ -4022,6 +4022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseWire
   place: {fileID: 2144291548}
+  placeZones: []
   lastDirection: 0
   isDrawing: 0
   lastPlacedPosition: {x: 0, y: 0, z: 0}
@@ -6223,6 +6224,53 @@ MonoBehaviour:
   MemoryInfo: {fileID: 1434096298}
   LevelInfo: {fileID: 1491268953}
   HintBlock: {fileID: 528209622}
+--- !u!1 &929890123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929890124}
+  - component: {fileID: 929890125}
+  m_Layer: 0
+  m_Name: Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &929890124
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929890123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 727858862}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929890125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929890123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbaec9e95e750ee4a9e3ea99adfcb11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Zone
+  Zones:
+  - NizLeft: {x: -4, y: -6, z: 0}
+    VerRight: {x: 3, y: 0, z: 0}
 --- !u!1 &966729806
 GameObject:
   m_ObjectHideFlags: 0
@@ -6595,11 +6643,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WireSpawn
   place: {fileID: 2144291548}
+  placeZones: []
   lastDirection: 0
   isDrawing: 0
   lastPlacedPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  zone: {fileID: 929890125}
   tile:
   - {fileID: 11400000, guid: bab4d687463a54a9bba80762192f0a96, type: 2}
   - {fileID: 11400000, guid: e3ab4144f2c764ff59d904c1fe989d72, type: 2}
@@ -6895,7 +6945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1010055672
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11131,6 +11181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WireSpawnRed
   place: {fileID: 2144291548}
+  placeZones: []
   lastDirection: 0
   isDrawing: 0
   lastPlacedPosition: {x: 0, y: 0, z: 0}
@@ -13519,6 +13570,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5090783736321754613, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1638019465}
+    - targetCorrespondingSourceObject: {fileID: 5090783736321754613, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 929890124}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5984591545024701334, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
       insertIndex: -1

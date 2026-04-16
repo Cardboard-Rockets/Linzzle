@@ -1,14 +1,24 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class BaseWire : MonoBehaviour
 {
     [SerializeField] protected PlaceScript place; // Назначается в инспекторе или через код
+    //[SerializeField] protected Zone zone;
+    [Header("Place Zones")]
+    public List<PlaceZone> placeZones = new List<PlaceZone>();
+
+
     public int lastDirection = 0;
     public bool isDrawing = false;
     public Vector3Int lastPlacedPosition;
     public Vector3Int startPosition;
     public Vector3Int endPosition;
+
+    
+
+   
 
     public virtual void PlaceCornerWire(Tilemap tileMap, Tile[] tile, Vector3Int position, int fromDirection, int toDirection)
     {
@@ -33,13 +43,32 @@ public class BaseWire : MonoBehaviour
         }
     }
 
+
+    protected bool IsInAnyZone(Vector3Int position)
+    {
+        if (placeZones == null || placeZones.Count == 0)
+            return true; // если зон нет — разрешаем везде
+
+        foreach (var zone in placeZones)
+        {
+            if (zone.IsInside(position))
+                return true;
+        }
+
+        return false;
+    }
+
+
     public virtual void Spawn(Tilemap map, Tile tile, Vector3Int position, int Degre)
     {
+        if (!IsInAnyZone(position))
+            return;
+
         map.SetTile(position, null);
-        if (place != null)
-            place.PlaceTileAtMousePosition(position, tile, map);
-        else
-            map.SetTile(position, tile); // fallback
+
+        if (place != null) place.PlaceTileAtMousePosition(position, tile, map);
+
+
 
         Matrix4x4 matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.Euler(0f, 0f, Degre), Vector3.one);
         map.SetTransformMatrix(position, matrix);
