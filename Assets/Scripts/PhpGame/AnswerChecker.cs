@@ -1,13 +1,22 @@
 using UnityEngine;
 using TMPro;
+using System.Diagnostics;
 
 public class AnswerChecker : MonoBehaviour
 {
+    [Header("Connections")]
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private PhysicsSystem_Script pscr;
+
+    [Header("Answer")]
     [SerializeField] private string correctAnswer;
     [SerializeField] private string PostVar;
     [SerializeField] private string PostAns;
+
+    [Header("StaticAnswer")]
+    [SerializeField] bool isStaticAnswer;
+    [SerializeField] TextAsset staticCode;
+
 
     private PHPTranslatorScript translator;
 
@@ -32,6 +41,32 @@ public class AnswerChecker : MonoBehaviour
 
     public void CheckAnswer()
 {
+        if (isStaticAnswer)
+        {
+            if (staticCode == null)
+            {
+                Debug.Log("Файл статического кода не подключен!");
+            }
+            else
+            {
+                string correctCode = Normalize(staticCode.text);
+                string userCode = Normalize(inputField.text);
+
+                if (userCode.Equals(correctCode))
+                {
+                    pscr.isBackGood = true;
+                    Debug.Log("Правильно (статическая проверка кода)");
+                }
+                else
+                {
+                    pscr.isBackGood = false;
+                    Debug.Log("Неправильно (Статическая проверка кода)");
+                }
+            }
+        }
+    else{
+
+
     translator = new PHPTranslatorScript();
 
     translator.SetPost(PostVar, PostAns);
@@ -45,15 +80,13 @@ public class AnswerChecker : MonoBehaviour
     if (fullOutput == correctAnswer)
     {
         pscr.isBackGood = true;
-        Debug.Log("Правильно");
+        Debug.Log("Правильно (Динамиеская проверка кода)");
     }
     else
     {
         pscr.isBackGood = false;
-        Debug.Log("Неправильно");
-
-        Debug.Log("Ожидалось: " + correctAnswer);
-        Debug.Log("Получено: " + fullOutput);
+        Debug.Log("Неправильно (Динамиеская проверка кода)");
     }
+}
 }
 }
