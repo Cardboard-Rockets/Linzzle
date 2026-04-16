@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
+using static UnityEditor.PlayerSettings;
 
 public class PlaceScript : MonoBehaviour
 {
@@ -20,6 +22,9 @@ public class PlaceScript : MonoBehaviour
     public int xmax;
     public int ymin;
     public int ymax;
+
+
+    
 
     void Update()
     {
@@ -43,6 +48,10 @@ public class PlaceScript : MonoBehaviour
         if (CurrentTile != null && EventSystem.current.IsPointerOverGameObject())
             return;
 
+        if ((tileid == 7 || tileid == 8) && Input.GetMouseButtonUp(0))
+        {
+            tileid = 0;
+        }
         // Размещение блоков
         if (CurrentTile != null && isInArea() && MoneySystem.isAvailable())
         {
@@ -50,6 +59,9 @@ public class PlaceScript : MonoBehaviour
             {
                 audioManager.PlayPlaceSound();
                 Vector3Int cellpos = GetTilePositionFromMouse();
+                Vector2Int pos = new Vector2Int(cellpos.x, cellpos.y);
+                
+
                 PlaceTileAtMousePosition(cellpos, CurrentTile, tileMap);
 
                 if (tileid != 7 && tileid != 8) 
@@ -58,12 +70,15 @@ public class PlaceScript : MonoBehaviour
                 }
             }
 
-            if ((tileid == 7 || tileid == 8) && Input.GetMouseButtonUp(0))
-            {
-                tileid = 0;
-            }
+            
 
             physicScript.RecalculateSystem();
+
+            
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log(GetTilePositionFromMouse());
         }
     }
 
@@ -76,6 +91,7 @@ public class PlaceScript : MonoBehaviour
 
     public void PlaceTileAtMousePosition(Vector3Int p, TileBase tile, Tilemap Map)
     {
+
         if (Map.GetTile(p) == null)
         {
             tscr.HideInfoBlocks();

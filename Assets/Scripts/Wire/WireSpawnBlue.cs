@@ -1,8 +1,13 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class WireSpawn : BaseWire
+public class WireSpawnBlue : BaseWire
 {
+
+    [SerializeField] public Zone zone;
+
+    
+    
     [SerializeField] Tile[] tile; // 0 - прямой, 1 - угловой, 2 - отзеркаленный
     [SerializeField] Tilemap tileMap;
     // поле place унаследовано от BaseWire - не дублируем!
@@ -20,6 +25,8 @@ public class WireSpawn : BaseWire
 
     void Start()
     {
+        
+        placeZones = zone.Zones;
         // Убеждаемся, что ссылка на PlaceScript задана (можно в инспекторе для BaseWire)
         if (place == null)
             Debug.LogError("PlaceScript reference is missing! Assign it to BaseWire component.");
@@ -52,10 +59,14 @@ public class WireSpawn : BaseWire
 
     void StartDrawingLine(Vector3Int startPos)
     {
+        if (!IsInAnyZone(startPos))
+            return;
+
         ResetDrawing();
         startPosition = startPos;
         lastPlacedPosition = startPos;
         isDrawing = true;
+
         CheckAndAdjustStartConnection(startPos);
     }
 
@@ -100,6 +111,9 @@ public class WireSpawn : BaseWire
 
     void ContinueDrawingLine(Vector3Int currentPos)
     {
+        if (!IsInAnyZone(currentPos))
+            return;
+
         Vector3Int direction = currentPos - lastPlacedPosition;
         int wireRotation = GetRotationFromDirection(direction);
 
