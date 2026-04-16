@@ -6,6 +6,8 @@ using static UnityEditor.PlayerSettings;
 
 public class PlaceScript : MonoBehaviour
 {
+    [SerializeField] public Zone zone;
+    private List<PlaceZone> Zones = new List<PlaceZone>();
     [Header("Tilemaps")]
     public Grid grid;
     public Tilemap tileMap;
@@ -16,15 +18,26 @@ public class PlaceScript : MonoBehaviour
     [SerializeField] PhysicsSystem_Script physicScript;
     [SerializeField] AudioManager audioManager;
     [SerializeField] TileInfoScript tscr;
+    protected bool IsInAnyZone(Vector3Int position)
+    {
+        if (Zones == null || Zones.Count == 0)
+            return true; // если зон нет — разрешаем везде
 
-    [Header("Building area coordinates")]
-    public int xmin;
-    public int xmax;
-    public int ymin;
-    public int ymax;
+        foreach (var zone in Zones)
+        {
+            if (zone.IsInside(position))
+                return true;
+        }
 
+        return false;
+    }
 
+    void Start() {
+        Zones = zone.Zones;
     
+    }
+
+
 
     void Update()
     {
@@ -53,7 +66,7 @@ public class PlaceScript : MonoBehaviour
             tileid = 0;
         }
         // Размещение блоков
-        if (CurrentTile != null && isInArea() && MoneySystem.isAvailable())
+        if (CurrentTile != null && IsInAnyZone(GetTilePositionFromMouse()) && MoneySystem.isAvailable())
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -103,10 +116,5 @@ public class PlaceScript : MonoBehaviour
         }
     }
 
-    bool isInArea()
-    {
-        Vector3Int cellpos = GetTilePositionFromMouse();
-        return cellpos.x >= xmin && cellpos.x <= xmax &&
-               cellpos.y >= ymin && cellpos.y <= ymax;
-    }
+    
 }

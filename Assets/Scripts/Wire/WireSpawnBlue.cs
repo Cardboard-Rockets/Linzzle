@@ -59,8 +59,7 @@ public class WireSpawnBlue : BaseWire
 
     void StartDrawingLine(Vector3Int startPos)
     {
-        if (!IsInAnyZone(startPos))
-            return;
+       
 
         ResetDrawing();
         startPosition = startPos;
