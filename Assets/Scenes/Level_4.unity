@@ -3313,6 +3313,8 @@ MonoBehaviour:
   correctAnswer: admin
   PostVar: name
   PostAns: admin
+  isStaticAnswer: 0
+  staticCode: {fileID: 0}
 --- !u!224 &561066836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4022,6 +4024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseWire
   place: {fileID: 2144291548}
+  placeZones: []
   lastDirection: 0
   isDrawing: 0
   lastPlacedPosition: {x: 0, y: 0, z: 0}
@@ -6595,11 +6598,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WireSpawn
   place: {fileID: 2144291548}
+  placeZones: []
   lastDirection: 0
   isDrawing: 0
   lastPlacedPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  zone: {fileID: 0}
   tile:
   - {fileID: 11400000, guid: bab4d687463a54a9bba80762192f0a96, type: 2}
   - {fileID: 11400000, guid: e3ab4144f2c764ff59d904c1fe989d72, type: 2}
@@ -6944,7 +6949,7 @@ MonoBehaviour:
   isStart: 1
   startDelay: 2
   debug: 0
-  level_dialogue_file: level3
+  level_dialogue_file: level4
 --- !u!1 &1044046910
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,6 +8160,7 @@ MonoBehaviour:
   speed: 15
   dragSpeed: 0.35
   placeScript: {fileID: 2144291548}
+  rcs: {fileID: 1253009850}
   minX: -20
   maxX: 20
   minY: -15
@@ -11131,6 +11137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WireSpawnRed
   place: {fileID: 2144291548}
+  placeZones: []
   lastDirection: 0
   isDrawing: 0
   lastPlacedPosition: {x: 0, y: 0, z: 0}
@@ -12864,15 +12871,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C \u0435\u0441\u0442\u044C \u043B\u0438
-    \u0447\u0442\u043E \u0442\u043E \u0432 $_POST, \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u044F
-    isset(). \u041F\u0440\u0438\u0441\u0432\u043E\u0439 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435
-    POST \u043A \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439. \u041F\u0440\u0432\u0435\u0440\u044C
-    \u0434\u043B\u0438\u043D\u043D\u0443 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439
-    \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E strlen(), \u0435\u0441\u043B\u0438
-    \u0434\u043B\u0438\u043D\u043D\u0430 \u043C\u0435\u043D\u044C\u0448\u0435 3,
-    \u0432\u044B\u0432\u0435\u0434\u0438 \u043E\u0448\u0438\u0431\u043A\u0443, \u0438\u043D\u0430\u0447\u0435
-    \u0432\u044B\u0432\u0435\u0434\u0438 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u0443\u044E."
+  m_text: "namespace services; \nclass Connect{ \npublic static function connect()\n{
+    \n$db = mysqli_connect( '142.164.22.190:3306',\n 'root',\n 'root',\n 'database'
+    \n);\n\n+ \u0414\u0432\u0430 \u0443\u0441\u043B\u043E\u0432\u0438\u044F"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 27ac745d6d7d2472c896abb79a0325ad, type: 2}
   m_sharedMaterial: {fileID: 1757805731619956864, guid: 27ac745d6d7d2472c896abb79a0325ad, type: 2}
@@ -12899,8 +12900,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class RTS_Camera : MonoBehaviour
+public class DragCameraScript : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] float speed = 15f;
     [SerializeField] float dragSpeed = 1.5f;
     [SerializeField] PlaceScript placeScript;
+    [SerializeField] ReworkedCameraSystem rcs;
 
     [Header("Map Limits")]
     [SerializeField] float minX;
@@ -26,6 +27,7 @@ public class RTS_Camera : MonoBehaviour
 
     void Update()
     {
+        if(rcs.borderSwitch){
     if(placeScript.CurrentTile == null){
     if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
         return;
@@ -33,6 +35,7 @@ public class RTS_Camera : MonoBehaviour
     }
 
     transform.position = ClampPosition(transform.position);
+        }
     }
 
     void HandleDrag()
@@ -72,5 +75,6 @@ public class RTS_Camera : MonoBehaviour
     pos.y = Mathf.Clamp(pos.y, minY + vertExtent, maxY - vertExtent);
 
     return pos;
+    
     }
 }
