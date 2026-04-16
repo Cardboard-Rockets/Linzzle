@@ -40,6 +40,8 @@ public class NodeSpawner : MonoBehaviour
             case 2: node.Setup(NodeType.If); break;
             case 3: node.Setup(NodeType.Answer); break;
             case 4: node.Setup(NodeType.Error); break;
+            case 5: node.Setup(NodeType.Length); break;
+            case 6: node.Setup(NodeType.db); break;
         }
     }
 }
