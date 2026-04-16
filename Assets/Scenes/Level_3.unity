@@ -3313,6 +3313,8 @@ MonoBehaviour:
   correctAnswer: admin
   PostVar: name
   PostAns: admin
+  isStaticAnswer: 0
+  staticCode: {fileID: 0}
 --- !u!224 &561066836
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6271,6 +6273,10 @@ MonoBehaviour:
   Zones:
   - NizLeft: {x: -4, y: -6, z: 0}
     VerRight: {x: 3, y: 0, z: 0}
+  - NizLeft: {x: -7, y: -5, z: 0}
+    VerRight: {x: -5, y: -4, z: 0}
+  - NizLeft: {x: 4, y: -3, z: 0}
+    VerRight: {x: 8, y: 0, z: 0}
 --- !u!1 &966729806
 GameObject:
   m_ObjectHideFlags: 0
@@ -13464,6 +13470,10 @@ PrefabInstance:
       propertyPath: tscr
       value: 
       objectReference: {fileID: 1647554894}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: zone
+      value: 
+      objectReference: {fileID: 929890125}
     - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
       propertyPath: DefText
       value: 
