@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 public class DragCameraScript : MonoBehaviour
 {
     [Header("Movement")]
-    [SerializeField] float speed = 15f;
     [SerializeField] float dragSpeed = 1.5f;
     [SerializeField] PlaceScript placeScript;
     [SerializeField] ReworkedCameraSystem rcs;
@@ -27,54 +26,61 @@ public class DragCameraScript : MonoBehaviour
 
     void Update()
     {
-        if(rcs.borderSwitch){
-    if(placeScript.CurrentTile == null){
-    if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
-        return;
-    HandleDrag();
-    }
+        if (!rcs.borderSwitch)
+            return;
 
-    transform.position = ClampPosition(transform.position);
-        }
+        // блокируем drag если выбран тайл или UI
+        if (placeScript.CurrentTile != null)
+            return;
+
+        if (EventSystem.current != null &&
+            EventSystem.current.IsPointerOverGameObject())
+            return;
+
+        HandleDrag();
     }
 
     void HandleDrag()
     {
-    if (Input.GetMouseButtonDown(0))
-    {
-        lastMousePos = Input.mousePosition;
-        isDragging = false;
-    }
-
-    if (Input.GetMouseButton(0))
-    {
-        Vector3 delta = Input.mousePosition - lastMousePos;
-
-        if (delta.magnitude > 5f)
-            isDragging = true;
-
-        if (isDragging)
+        if (Input.GetMouseButtonDown(0))
         {
-            Vector3 move = new Vector3(-delta.x, -delta.y, 0f) * dragSpeed * Time.deltaTime;
-
-            Vector3 targetPos = transform.position + move;
-
-            transform.position = ClampPosition(targetPos);
+            lastMousePos = Input.mousePosition;
+            isDragging = false;
         }
 
-        lastMousePos = Input.mousePosition;
-    }
+        if (Input.GetMouseButton(0))
+        {
+            Vector3 delta = Input.mousePosition - lastMousePos;
+
+            if (delta.magnitude > 5f)
+                isDragging = true;
+
+            if (isDragging)
+            {
+                Vector3 move = new Vector3(-delta.x, -delta.y, 0f) * dragSpeed * Time.deltaTime;
+
+                Vector3 targetPos = transform.position + move;
+
+                transform.position = ClampPosition(targetPos);
+            }
+
+            lastMousePos = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            isDragging = false;
+        }
     }
 
-   Vector3 ClampPosition(Vector3 pos)
+    Vector3 ClampPosition(Vector3 pos)
     {
-    float vertExtent = cam.orthographicSize;
-    float horzExtent = vertExtent * cam.aspect;
+        float vertExtent = cam.orthographicSize;
+        float horzExtent = vertExtent * cam.aspect;
 
-    pos.x = Mathf.Clamp(pos.x, minX + horzExtent, maxX - horzExtent);
-    pos.y = Mathf.Clamp(pos.y, minY + vertExtent, maxY - vertExtent);
+        pos.x = Mathf.Clamp(pos.x, minX + horzExtent, maxX - horzExtent);
+        pos.y = Mathf.Clamp(pos.y, minY + vertExtent, maxY - vertExtent);
 
-    return pos;
-    
+        return pos;
     }
 }
