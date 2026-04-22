@@ -2438,6 +2438,8 @@ MonoBehaviour:
   correctAnswer: admin
   PostVar: name
   PostAns: admin
+  isStaticAnswer: 0
+  staticCode: {fileID: 0}
 --- !u!224 &611506731
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4118,7 +4120,6 @@ MonoBehaviour:
   MemoryInfo: {fileID: 0}
   LevelInfo: {fileID: 0}
   HintBlock: {fileID: 1527683843}
-  HintLevelInfo: {fileID: 1887976553}
 --- !u!1 &941796385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,6 +5086,7 @@ GameObject:
   - component: {fileID: 1253009849}
   - component: {fileID: 1253009850}
   - component: {fileID: 1253009851}
+  - component: {fileID: 1253009852}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5222,10 +5224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b672c00da72e9492bbbe39654c95e28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReworkedCameraSystem
-  minX: -10
-  maxX: 15
-  minY: -12
-  maxY: 3
   borderSwitch: 0
 --- !u!95 &1253009851
 Animator:
@@ -5249,6 +5247,25 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1253009852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253009845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbb79ee4cda94136b55b26ba1ec96cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraDrag2D
+  cam: {fileID: 1253009847}
+  placeScript: {fileID: 2144291548}
+  dragSpeed: 1
+  minX: -10
+  maxX: 10
+  minY: -10
+  maxY: 10
 --- !u!1 &1286916371
 GameObject:
   m_ObjectHideFlags: 0

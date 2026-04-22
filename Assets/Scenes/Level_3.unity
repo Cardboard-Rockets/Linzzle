@@ -6655,7 +6655,6 @@ MonoBehaviour:
   lastPlacedPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
-  zone: {fileID: 929890125}
   tile:
   - {fileID: 11400000, guid: bab4d687463a54a9bba80762192f0a96, type: 2}
   - {fileID: 11400000, guid: e3ab4144f2c764ff59d904c1fe989d72, type: 2}
@@ -8032,6 +8031,7 @@ GameObject:
   - component: {fileID: 1253009850}
   - component: {fileID: 1253009851}
   - component: {fileID: 1253009852}
+  - component: {fileID: 1253009853}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8169,10 +8169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b672c00da72e9492bbbe39654c95e28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReworkedCameraSystem
-  minX: -20
-  maxX: 20
-  minY: -15
-  maxY: 6
   borderSwitch: 0
 --- !u!95 &1253009851
 Animator:
@@ -8208,10 +8204,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a169dbb50a27b4a57b0cb898c66f7d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RTS_Camera
-  speed: 15
   dragSpeed: 0.35
   placeScript: {fileID: 2144291548}
   rcs: {fileID: 0}
+  minX: -20
+  maxX: 20
+  minY: -15
+  maxY: 6
+--- !u!114 &1253009853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253009845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbb79ee4cda94136b55b26ba1ec96cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraDrag2D
+  cam: {fileID: 1253009847}
+  placeScript: {fileID: 2144291548}
+  dragSpeed: 0.35
   minX: -20
   maxX: 20
   minY: -15
