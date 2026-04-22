@@ -6951,7 +6951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1010055672
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8211,6 +8211,7 @@ MonoBehaviour:
   speed: 15
   dragSpeed: 0.35
   placeScript: {fileID: 2144291548}
+  rcs: {fileID: 0}
   minX: -20
   maxX: 20
   minY: -15
