@@ -1,187 +1,131 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class WireSpawnRed : BaseWire
 {
-    [SerializeField] Tile[] tile; // 0 - прямой, 1 - угловой, 2 - отзеркаленный
+    [SerializeField] Tile[] tile;
     [SerializeField] Tilemap tileMap;
 
-    [Header("Source (Щиток)")]
-    [SerializeField] Tile sourceTile; // тайл щитка, с которого начинается провод
-
     [Header("Targets")]
+    [SerializeField] Tile sourceTile;
     [SerializeField] Tile serverTile;
     [SerializeField] Tile backTile;
     [SerializeField] Tile frontTile;
 
-    private Tile[] targetTiles = new Tile[3]; // 0-back, 1-front, 2-server
+    private Tile[] targets = new Tile[3];
 
-    [Header("Global Connection Status")]
-    public bool isConnectedToServer = false;
-    public bool isConnectedToBack = false;
-    public bool isConnectedToFront = false;
+    public bool isConnectedToServer;
+    public bool isConnectedToBack;
+    public bool isConnectedToFront;
 
     void Start()
     {
-        if (place == null)
-            Debug.LogError("PlaceScript reference is missing! Assign it to BaseWire component.");
-
-        targetTiles[0] = backTile;
-        targetTiles[1] = frontTile;
-        targetTiles[2] = serverTile;
+        targets[0] = backTile;
+        targets[1] = frontTile;
+        targets[2] = serverTile;
     }
 
     void Update()
     {
-        if (place != null && place.CurrentTile != null && place.tiles[PlaceScript.tileid] == tile[0] && MoneySystem.isAvailable())
-        {
-            Vector3Int currentPos = place.GetTilePositionFromMouse();
+        if (place == null || place.CurrentTile == null) return;
+        if (PlaceScript.tileid != 8) return;
+        if (!MoneySystem.isAvailable()) return;
+        if (IsPointerOverUI()) return;
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                StartDrawingLine(currentPos);
-            }
-            else if (Input.GetMouseButton(0) && isDrawing && lastPlacedPosition != currentPos)
-            {
-                ContinueDrawingLine(currentPos);
-            }
-            else if (Input.GetMouseButtonUp(0))
-            {
-                FinishDrawingLine();
-                ResetDrawing();
-            }
+        Vector3Int pos = GetPointerCell();
+
+        if (PointerDown())
+            StartDrawing(pos);
+
+        else if (PointerHold() && isDrawing && lastPlacedPosition != pos)
+            ContinueDrawing(pos);
+
+        else if (PointerUp())
+        {
+            FinishDrawing();
+            ResetDrawing();
         }
     }
 
-    void StartDrawingLine(Vector3Int startPos)
+    void StartDrawing(Vector3Int pos)
     {
         ResetDrawing();
-        startPosition = startPos;
-        lastPlacedPosition = startPos;
+        startPosition = pos;
+        lastPlacedPosition = pos;
         isDrawing = true;
-        CheckAndAdjustStartConnection(startPos);
+
+        CheckStart(pos);
     }
 
-    void CheckAndAdjustStartConnection(Vector3Int pos)
+    void CheckStart(Vector3Int pos)
     {
-        Vector3Int[] neighbors = new Vector3Int[]
+        var dirs = new Vector3Int[]
         {
-            pos + Vector3Int.right,
-            pos + Vector3Int.left,
-            pos + Vector3Int.up,
-            pos + Vector3Int.down
+            Vector3Int.right,
+            Vector3Int.left,
+            Vector3Int.up,
+            Vector3Int.down
         };
-        int[] neighborDirections = new int[] { 0, 180, 90, 270 };
 
-        for (int i = 0; i < neighbors.Length; i++)
+        int[] rot = {0,180,90,270};
+
+        for (int i = 0; i < dirs.Length; i++)
         {
-            TileBase neighborTile = tileMap.GetTile(neighbors[i]);
-
-            if (sourceTile != null && neighborTile == sourceTile)
+            if (tileMap.GetTile(pos + dirs[i]) == sourceTile)
             {
-                int rotation = (neighborDirections[i] + 180) % 360;
-                Spawn(tileMap, tile[0], pos, rotation);
-                lastDirection = rotation;
+                lastDirection = (rot[i] + 180) % 360;
+                Spawn(tileMap, tile[0], pos, lastDirection);
                 return;
             }
         }
     }
 
-    void ContinueDrawingLine(Vector3Int currentPos)
+    void ContinueDrawing(Vector3Int pos)
     {
-        Vector3Int direction = currentPos - lastPlacedPosition;
-        int wireRotation = GetRotationFromDirection(direction);
+        Vector3Int dir = pos - lastPlacedPosition;
+        int rot = GetRotationFromDirection(dir);
 
-        if (lastDirection != wireRotation && lastPlacedPosition != currentPos)
-        {
-            TileBase previousTile = tileMap.GetTile(lastPlacedPosition);
-            if (previousTile != tile[1] && previousTile != tile[2])
-            {
-                PlaceCornerWire(tileMap, tile, lastPlacedPosition, lastDirection, wireRotation);
-            }
-        }
+        if (lastDirection != rot)
+            Spawn(tileMap, tile[1], lastPlacedPosition, rot);
 
-        if (tileMap.GetTile(currentPos) == null)
-        {
-            Spawn(tileMap, tile[0], currentPos, wireRotation);
-        }
+        if (tileMap.GetTile(pos) == null)
+            Spawn(tileMap, tile[0], pos, rot);
 
-        lastPlacedPosition = currentPos;
-        lastDirection = wireRotation;
+        lastPlacedPosition = pos;
+        lastDirection = rot;
     }
 
-    void FinishDrawingLine()
+    void FinishDrawing()
     {
-        if (!isDrawing) return;
         endPosition = lastPlacedPosition;
-        CheckEndConnectionRed(endPosition);
-        ValidateConnectionRed();
+        Validate();
     }
 
-    // Переопределяем логику окончания подключения для трёх типов целей
-    void CheckEndConnectionRed(Vector3Int pos)
+    void Validate()
     {
-        Vector3Int[] neighbors = new Vector3Int[] { pos + Vector3Int.right, pos + Vector3Int.left, pos + Vector3Int.up, pos + Vector3Int.down };
-        int[] neighborDirections = new int[] { 0, 180, 90, 270 };
+        bool s = Check(sourceTile, startPosition);
+        bool b = Check(backTile, endPosition);
+        bool f = Check(frontTile, endPosition);
+        bool sr = Check(serverTile, endPosition);
 
-        for (int i = 0; i < neighbors.Length; i++)
-        {
-            TileBase neighborTile = tileMap.GetTile(neighbors[i]);
-
-            // Проверяем каждый тип цели
-            for (int targetIndex = 0; targetIndex < targetTiles.Length; targetIndex++)
-            {
-                if (targetTiles[targetIndex] != null && neighborTile == targetTiles[targetIndex])
-                {
-                    int rotation = neighborDirections[i];
-                    if (rotation != lastDirection)
-                    {
-                        // Выбираем нужный угловой тайл и его поворот
-                        if (neighbors[i] == pos + Vector3Int.left && lastDirection == 90)
-                            Spawn(tileMap, tile[1], pos, 90);
-                        else if (neighbors[i] == pos + Vector3Int.left && lastDirection == 270)
-                            Spawn(tileMap, tile[2], pos, 0);
-                        else if (neighbors[i] == pos + Vector3Int.right && lastDirection == 90)
-                            Spawn(tileMap, tile[2], pos, 180);
-                        else if (neighbors[i] == pos + Vector3Int.right && lastDirection == 270)
-                            Spawn(tileMap, tile[1], pos, 270);
-                        else if (neighbors[i] == pos + Vector3Int.up && lastDirection == 0)
-                            Spawn(tileMap, tile[1], pos, 0);
-                        else if (neighbors[i] == pos + Vector3Int.up && lastDirection == 180)
-                            Spawn(tileMap, tile[2], pos, 270);
-                        else if (neighbors[i] == pos + Vector3Int.down && lastDirection == 0)
-                            Spawn(tileMap, tile[2], pos, 90);
-                        else if (neighbors[i] == pos + Vector3Int.down && lastDirection == 180)
-                            Spawn(tileMap, tile[1], pos, 180);
-                    }
-                    return;
-                }
-            }
-        }
+        if (s && b) isConnectedToBack = true;
+        if (s && f) isConnectedToFront = true;
+        if (s && sr) isConnectedToServer = true;
     }
 
-    void ValidateConnectionRed()
+    bool Check(Tile t, Vector3Int pos)
     {
-        bool hasSourceAtStart = CheckForTileAtPosition(tileMap, startPosition, sourceTile);
-        bool hasBackAtEnd = CheckForTileAtPosition(tileMap, endPosition, backTile);
-        bool hasFrontAtEnd = CheckForTileAtPosition(tileMap, endPosition, frontTile);
-        bool hasServerAtEnd = CheckForTileAtPosition(tileMap, endPosition, serverTile);
+        return tileMap.GetTile(pos) == t;
+    }
 
-        // Также возможен случай, когда щиток в конце, а цель в начале – но по логике провод идёт от щитка, поэтому достаточно одного направления
-        if (hasSourceAtStart && hasBackAtEnd)
-        {
-            isConnectedToBack = true;
-            Debug.Log("Красный провод подключён к БЕК!");
-        }
-        if (hasSourceAtStart && hasFrontAtEnd)
-        {
-            isConnectedToFront = true;
-            Debug.Log("Красный провод подключён к ФРОНТ!");
-        }
-        if (hasSourceAtStart && hasServerAtEnd)
-        {
-            isConnectedToServer = true;
-            Debug.Log("Красный провод подключён к СЕРВЕРУ!");
-        }
+    bool IsPointerOverUI()
+    {
+        if (EventSystem.current == null) return false;
+
+        if (Application.isMobilePlatform && Input.touchCount > 0)
+            return EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
+
+        return EventSystem.current.IsPointerOverGameObject();
     }
 }

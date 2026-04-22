@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class DragCameraScript : MonoBehaviour
 {
@@ -16,7 +15,7 @@ public class DragCameraScript : MonoBehaviour
 
     Camera cam;
 
-    private Vector3 lastMousePos;
+    private Vector2 lastPos;
     private bool isDragging;
 
     void Start()
@@ -26,48 +25,42 @@ public class DragCameraScript : MonoBehaviour
 
     void Update()
     {
-        if (!rcs.borderSwitch)
-            return;
-
-        // блокируем drag если выбран тайл или UI
-        if (placeScript.CurrentTile != null)
-            return;
-
-        if (EventSystem.current != null &&
-            EventSystem.current.IsPointerOverGameObject())
-            return;
+        if (!rcs.borderSwitch) return;
+        if (placeScript.CurrentTile != null) return;
+        if (MobileInput.OverUI()) return;
 
         HandleDrag();
     }
 
     void HandleDrag()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (MobileInput.Down())
         {
-            lastMousePos = Input.mousePosition;
+            lastPos = MobileInput.Position();
             isDragging = false;
         }
 
-        if (Input.GetMouseButton(0))
+        if (MobileInput.Hold())
         {
-            Vector3 delta = Input.mousePosition - lastMousePos;
+            Vector2 current = MobileInput.Position();
+            Vector2 delta = current - lastPos;
 
             if (delta.magnitude > 5f)
                 isDragging = true;
 
             if (isDragging)
             {
-                Vector3 move = new Vector3(-delta.x, -delta.y, 0f) * dragSpeed * Time.deltaTime;
+                Vector3 move = new Vector3(-delta.x, -delta.y, 0f)
+                               * dragSpeed * Time.deltaTime;
 
-                Vector3 targetPos = transform.position + move;
-
-                transform.position = ClampPosition(targetPos);
+                Vector3 target = transform.position + move;
+                transform.position = ClampPosition(target);
             }
 
-            lastMousePos = Input.mousePosition;
+            lastPos = current;
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (MobileInput.Up())
         {
             isDragging = false;
         }
@@ -75,11 +68,11 @@ public class DragCameraScript : MonoBehaviour
 
     Vector3 ClampPosition(Vector3 pos)
     {
-        float vertExtent = cam.orthographicSize;
-        float horzExtent = vertExtent * cam.aspect;
+        float vert = cam.orthographicSize;
+        float horz = vert * cam.aspect;
 
-        pos.x = Mathf.Clamp(pos.x, minX + horzExtent, maxX - horzExtent);
-        pos.y = Mathf.Clamp(pos.y, minY + vertExtent, maxY - vertExtent);
+        pos.x = Mathf.Clamp(pos.x, minX + horz, maxX - horz);
+        pos.y = Mathf.Clamp(pos.y, minY + vert, maxY - vert);
 
         return pos;
     }

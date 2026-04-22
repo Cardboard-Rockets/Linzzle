@@ -1,3 +1,6 @@
+// ===============================
+// PlaceScript.cs
+// ===============================
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,20 +10,89 @@ public class PlaceScript : MonoBehaviour
 {
     [SerializeField] public Zone zone;
     private List<PlaceZone> Zones = new List<PlaceZone>();
+
     [Header("Tilemaps")]
     public Grid grid;
     public Tilemap tileMap;
+
     public static int tileid;
     public TileBase[] tiles;
-    
     public TileBase CurrentTile;
+
     [SerializeField] PhysicsSystem_Script physicScript;
     [SerializeField] AudioManager audioManager;
     [SerializeField] TileInfoScript tscr;
+
+    void Start()
+    {
+        Zones = zone.Zones;
+    }
+
+    void Update()
+    {
+        CurrentTile = tiles[tileid];
+
+        if (Input.GetKeyDown(KeyCode.Q))
+            tileid = 0;
+
+        // просмотр информации
+        if (CurrentTile == null)
+        {
+            if (UniversalInput.Down())
+                tscr.ShowTileInfo();
+        }
+
+        // защита от UI
+        if (CurrentTile != null && IsPointerOverUI())
+            return;
+
+        // проводка
+        if ((tileid == 7 || tileid == 8) && UniversalInput.Up())
+        {
+            tileid = 0;
+        }
+
+        // установка блоков
+        if (CurrentTile != null &&
+            IsInAnyZone(GetTilePositionFromPointer()) &&
+            MoneySystem.isAvailable())
+        {
+            if (UniversalInput.Down())
+            {
+                audioManager.PlayPlaceSound();
+
+                Vector3Int cellPos = GetTilePositionFromPointer();
+
+                PlaceTileAtMousePosition(cellPos, CurrentTile, tileMap);
+
+                if (tileid != 7 && tileid != 8)
+                    tileid = 0;
+            }
+
+            physicScript.RecalculateSystem();
+        }
+    }
+
+    bool IsPointerOverUI()
+    {
+        if (EventSystem.current == null)
+            return false;
+
+        if (UniversalInput.IsMobile())
+        {
+            if (Input.touchCount > 0)
+                return EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId);
+
+            return false;
+        }
+
+        return EventSystem.current.IsPointerOverGameObject();
+    }
+
     protected bool IsInAnyZone(Vector3Int position)
     {
         if (Zones == null || Zones.Count == 0)
-            return true; // если зон нет — разрешаем везде
+            return true;
 
         foreach (var zone in Zones)
         {
@@ -31,89 +103,27 @@ public class PlaceScript : MonoBehaviour
         return false;
     }
 
-    void Start() {
-        Zones = zone.Zones;
-    
-    }
-
-
-
-    void Update()
+    public Vector3Int GetTilePositionFromPointer()
     {
-        CurrentTile = tiles[tileid];
-
-        if (Input.GetKeyDown(KeyCode.Q)) 
-        { 
-            tileid = 0; 
-        }
-
-        // Показ информации о поставленных блоках
-        if (CurrentTile == null)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                tscr.ShowTileInfo();
-            }
-        }
-
-        // Защита от UI только когда пытаемся ставить блок
-        if (CurrentTile != null && EventSystem.current.IsPointerOverGameObject())
-            return;
-
-        if ((tileid == 7 || tileid == 8) && Input.GetMouseButtonUp(0))
-        {
-            tileid = 0;
-        }
-        // Размещение блоков
-        if (CurrentTile != null && IsInAnyZone(GetTilePositionFromMouse()) && MoneySystem.isAvailable())
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                audioManager.PlayPlaceSound();
-                Vector3Int cellpos = GetTilePositionFromMouse();
-                Vector2Int pos = new Vector2Int(cellpos.x, cellpos.y);
-                
-
-                PlaceTileAtMousePosition(cellpos, CurrentTile, tileMap);
-
-                if (tileid != 7 && tileid != 8) 
-                { 
-                    tileid = 0; 
-                }
-            }
-
-            
-
-            physicScript.RecalculateSystem();
-
-            
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(GetTilePositionFromMouse());
-        }
+        Vector3 pos = Camera.main.ScreenToWorldPoint(UniversalInput.Position());
+        return grid.WorldToCell(pos);
     }
 
-    // === Остальные методы без изменений ===
     public Vector3Int GetTilePositionFromMouse()
     {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return grid.WorldToCell(mousePosition);
+        return GetTilePositionFromPointer();
     }
 
-    public void PlaceTileAtMousePosition(Vector3Int p, TileBase tile, Tilemap Map)
+    public void PlaceTileAtMousePosition(Vector3Int p, TileBase tile, Tilemap map)
     {
-
-        if (Map.GetTile(p) == null)
+        if (map.GetTile(p) == null)
         {
             tscr.HideInfoBlocks();
-            Map.SetTile(p, tile);
-            if (Map.GetTile(p) != null)
-            {
+
+            map.SetTile(p, tile);
+
+            if (map.GetTile(p) != null)
                 MoneySystem.buy(tileid);
-            }
         }
     }
-
-    
 }

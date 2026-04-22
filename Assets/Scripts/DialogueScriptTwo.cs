@@ -1,8 +1,11 @@
+// ===============================
+// DialogueScriptTwo.cs
+// ===============================
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-[System.Serializable] // Текущая реплика
+[System.Serializable]
 public class DialogueLine
 {
     [TextArea(3, 10)]
@@ -11,7 +14,7 @@ public class DialogueLine
     public string sprite;
 }
 
-[System.Serializable] // Массивы для всех диалогов
+[System.Serializable]
 public class DialogueData
 {
     public DialogueLine[] start;
@@ -88,13 +91,13 @@ public class DialogueScriptTwo : MonoBehaviour
             StartDialogue(data.lose);
         }
 
-        if (Input.GetMouseButtonDown(0) && isDialogueActive)
+        if (isDialogueActive && UniversalInput.Down())
         {
             NextLine();
         }
     }
 
-    void LoadDialogue() // Подгрузить диалоги из файлика
+    void LoadDialogue()
     {
         TextAsset json = Resources.Load<TextAsset>(level_dialogue_file);
 
@@ -109,7 +112,8 @@ public class DialogueScriptTwo : MonoBehaviour
 
     void StartDialogue(DialogueLine[] dialogue)
     {
-        if (dialogue == null || dialogue.Length == 0) return;
+        if (dialogue == null || dialogue.Length == 0)
+            return;
 
         currentDialogue = dialogue;
         currentIndex = 0;
@@ -141,36 +145,30 @@ public class DialogueScriptTwo : MonoBehaviour
     }
 
     void EndDialogue()
-{
-    isDialogueActive = false;
-    DialogueBox.SetActive(false);
-
-    if (hasWinPlayed)
     {
-        levelManager.nextLevel();
-    }
-    else if (hasLosePlayed)
-    {
-        levelManager.restartLevel();
-    }
-}
+        isDialogueActive = false;
+        DialogueBox.SetActive(false);
 
+        if (hasWinPlayed)
+            levelManager.nextLevel();
+        else if (hasLosePlayed)
+            levelManager.restartLevel();
+    }
 
     Sprite GetSprite(string emotion)
-{
-    switch (emotion)
     {
-        case "Idle": return idleSprite;
-        case "Hi": return hiSprite;
-        case "Pls": return plsSprite;
-        case "Idk": return idkSprite;
-        case "Think": return thinkSprite;
-        case "Like": return likeSprite;
-        case "Coffee": return coffeeSprite;
-        case "Blya": return blyaSprite;
-        default: return idleSprite;
+        switch (emotion)
+        {
+            case "Hi": return hiSprite;
+            case "Pls": return plsSprite;
+            case "Idk": return idkSprite;
+            case "Think": return thinkSprite;
+            case "Like": return likeSprite;
+            case "Coffee": return coffeeSprite;
+            case "Blya": return blyaSprite;
+            default: return idleSprite;
+        }
     }
-}
 
     public void ResetDialogues()
     {

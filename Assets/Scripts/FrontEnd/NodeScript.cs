@@ -13,16 +13,18 @@ public class Port
     public PortType type = PortType.Default;
 }
 
-public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
+public class NodeScript : MonoBehaviour,
+    IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
-    private bool isDragging;
 
     public int id;
     public NodeType type;
     public List<NodeScript> exits = new List<NodeScript>();
     public List<Port> outputPorts = new List<Port>();
+
+    private bool isDragging;
 
     private void Awake()
     {
@@ -37,31 +39,11 @@ public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         }
     }
 
-    private void Start()
-    {
-        if (GraphScript.Instance != null)
-            GraphScript.Instance.RegisterNode(this);
-        else
-            Debug.LogError($"GraphScript не найден! Нода: {name}");
-    }
-
-    public void Setup(NodeType nodeType)
-    {
-        type = nodeType;
-        if (GraphScript.Instance != null)
-            id = GraphScript.Instance.GetNextID();
-    }
-
     public void StartConnection(int portIndex)
     {
-        if (portIndex < 0 || portIndex >= outputPorts.Count)
-        {
-            Debug.LogWarning($"Node {name}: порт с индексом {portIndex} не найден!");
-            return;
-        }
+        if (portIndex < 0 || portIndex >= outputPorts.Count) return;
 
-        Port port = outputPorts[portIndex];
-        NodeConnector.Instance.StartConnection(this, port);
+        NodeConnector.Instance.StartConnection(this, outputPorts[portIndex]);
     }
 
     public void ConnectTo(NodeScript target)
@@ -71,16 +53,30 @@ public class NodeScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     }
 
     public void OnPointerDown(PointerEventData eventData)
-{
-    NodeConnector.Instance.EndConnection(this);
-}
+    {
+        NodeConnector.Instance.EndConnection(this);
+    }
 
-    public void OnBeginDrag(PointerEventData eventData) => isDragging = true;
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        isDragging = true;
+    }
 
     public void OnDrag(PointerEventData eventData)
     {
         rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
-    public void OnEndDrag(PointerEventData eventData) => isDragging = false;
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        isDragging = false;
+    }
+
+    public void Setup(NodeType nodeType)
+{
+    type = nodeType;
+
+    if (GraphScript.Instance != null)
+        id = GraphScript.Instance.GetNextID();
+}
 }

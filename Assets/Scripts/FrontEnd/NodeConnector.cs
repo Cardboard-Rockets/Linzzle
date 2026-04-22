@@ -23,6 +23,7 @@ public class NodeConnector : MonoBehaviour
 
         RectTransform lineObj = Instantiate(linePrefab, linesParent);
         currentLine = lineObj.GetComponent<ConnectionLine>();
+
         currentLine.a = port.button.GetComponent<RectTransform>();
         currentLine.followMouse = true;
         currentLine.b = null;

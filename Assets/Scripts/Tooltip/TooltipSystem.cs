@@ -5,26 +5,32 @@ public class TooltipSystem : MonoBehaviour
 {
     private static TooltipSystem instance;
 
-    private GameObject _root;
-    private TextMeshProUGUI _nameText;
-    private TextMeshProUGUI _priceText;
-    private TextMeshProUGUI _descText;
-    private RectTransform _rect;
-    private Canvas _canvas;
+    private GameObject root;
+    private TextMeshProUGUI nameText;
+    private TextMeshProUGUI priceText;
+    private TextMeshProUGUI descText;
+
+    private RectTransform rect;
+    private Canvas canvas;
 
     private const float OffsetX = 20f;
     private const float OffsetY = -20f;
     private const float Padding = 12f;
 
-    public void SetupReferences(GameObject root, TextMeshProUGUI name,
-        TextMeshProUGUI price, TextMeshProUGUI desc, Canvas canvas)
+    public void SetupReferences(
+        GameObject rootObj,
+        TextMeshProUGUI name,
+        TextMeshProUGUI price,
+        TextMeshProUGUI desc,
+        Canvas canvasRef)
     {
-        _root = root;
-        _nameText = name;
-        _priceText = price;
-        _descText = desc;
-        _rect = root.GetComponent<RectTransform>();
-        _canvas = canvas;
+        root = rootObj;
+        nameText = name;
+        priceText = price;
+        descText = desc;
+        canvas = canvasRef;
+        rect = root.GetComponent<RectTransform>();
+
         instance = this;
 
         root.SetActive(false);
@@ -32,21 +38,19 @@ public class TooltipSystem : MonoBehaviour
 
     void Update()
     {
-        if (_root != null && _root.activeSelf)
+        if (root != null && root.activeSelf)
             FollowCursor();
     }
 
-    public static void Show(string label, int price, string description = "")
+    public static void Show(string label, int price, string description)
     {
         if (instance == null) return;
 
-        instance._nameText.text = label;
-        instance._priceText.text = "Цена: " + price + " $";
-        instance._descText.text = description;
+        instance.nameText.text = label;
+        instance.priceText.text = $"Цена: {price}";
+        instance.descText.text = description;
 
-        instance._descText.gameObject.SetActive(!string.IsNullOrEmpty(description));
-        instance._root.SetActive(true);
-
+        instance.root.SetActive(true);
         Canvas.ForceUpdateCanvases();
         instance.FollowCursor();
     }
@@ -54,22 +58,16 @@ public class TooltipSystem : MonoBehaviour
     public static void Hide()
     {
         if (instance == null) return;
-        instance._root.SetActive(false);
+        instance.root.SetActive(false);
     }
 
     void FollowCursor()
     {
-        float scale = _canvas.scaleFactor;
-
-        float w = _rect.sizeDelta.x * scale;
-        float h = _rect.sizeDelta.y * scale;
+        float scale = canvas.scaleFactor;
 
         float x = Input.mousePosition.x + OffsetX * scale;
         float y = Input.mousePosition.y + OffsetY * scale;
 
-        x = Mathf.Clamp(x, Padding, Screen.width - w - Padding);
-        y = Mathf.Clamp(y, h + Padding, Screen.height - Padding);
-
-        _rect.position = new Vector3(x, y, 0f);
+        rect.position = new Vector3(x, y, 0f);
     }
 }
