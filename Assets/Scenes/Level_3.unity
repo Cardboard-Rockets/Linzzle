@@ -2814,11 +2814,11 @@ PrefabInstance:
       objectReference: {fileID: 174494949}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: RamNeed
-      value: 32
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: MemoryNeed
-      value: 1000
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: Type1Amount
@@ -2826,11 +2826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: Type2Amount
-      value: 1000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: Type3Amount
-      value: 1000
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1803503099042509783, guid: 22af3496159ce478d878d79ec7175e9a, type: 3}
       propertyPath: CurrentLevel
@@ -8169,10 +8169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b672c00da72e9492bbbe39654c95e28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReworkedCameraSystem
-  minX: -20
-  maxX: 20
-  minY: -15
-  maxY: 6
   borderSwitch: 0
 --- !u!95 &1253009851
 Animator:
@@ -8208,10 +8204,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a169dbb50a27b4a57b0cb898c66f7d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RTS_Camera
-  speed: 15
   dragSpeed: 0.35
   placeScript: {fileID: 2144291548}
-  rcs: {fileID: 0}
+  rcs: {fileID: 1253009850}
   minX: -20
   maxX: 20
   minY: -15
