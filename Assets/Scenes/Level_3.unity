@@ -11189,6 +11189,7 @@ MonoBehaviour:
   lastPlacedPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  zone: {fileID: 929890125}
   tile:
   - {fileID: 11400000, guid: cb8d08927d2f0410faff94dc86fa43ff, type: 2}
   - {fileID: 11400000, guid: 23e2650c68603479eb2d03f46355a270, type: 2}

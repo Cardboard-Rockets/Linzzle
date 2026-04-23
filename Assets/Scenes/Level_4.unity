@@ -119,6 +119,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8006049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8006051}
+  - component: {fileID: 8006050}
+  m_Layer: 0
+  m_Name: Zone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &8006050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbaec9e95e750ee4a9e3ea99adfcb11e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Zone
+  Zones:
+  - NizLeft: {x: -7, y: -3, z: 0}
+    VerRight: {x: -4, y: 1, z: 0}
+  - NizLeft: {x: -5, y: -4, z: 0}
+    VerRight: {x: -4, y: -4, z: 0}
+  - NizLeft: {x: -3, y: -3, z: 0}
+    VerRight: {x: -3, y: -2, z: 0}
+  - NizLeft: {x: -2, y: -5, z: 0}
+    VerRight: {x: 0, y: 0, z: 0}
+  - NizLeft: {x: 0, y: -6, z: 0}
+    VerRight: {x: 2, y: -5, z: 0}
+  - NizLeft: {x: -2, y: -5, z: 0}
+    VerRight: {x: 2, y: -2, z: 0}
+  - NizLeft: {x: -2, y: -5, z: 0}
+    VerRight: {x: 1, y: -1, z: 0}
+  - NizLeft: {x: 3, y: -4, z: 0}
+    VerRight: {x: 4, y: -3, z: 0}
+  - NizLeft: {x: 3, y: -4, z: 0}
+    VerRight: {x: 4, y: -3, z: 0}
+  - NizLeft: {x: 4, y: -5, z: 0}
+    VerRight: {x: 7, y: -5, z: 0}
+  - NizLeft: {x: 5, y: -2, z: 0}
+    VerRight: {x: 7, y: -1, z: 0}
+  - NizLeft: {x: 4, y: -5, z: 0}
+    VerRight: {x: 7, y: -2, z: 0}
+--- !u!4 &8006051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8006049}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 727858862}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14703136
 GameObject:
   m_ObjectHideFlags: 0
@@ -6745,7 +6814,7 @@ MonoBehaviour:
   lastPlacedPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
-  zone: {fileID: 0}
+  zone: {fileID: 8006050}
   tile:
   - {fileID: 11400000, guid: bab4d687463a54a9bba80762192f0a96, type: 2}
   - {fileID: 11400000, guid: e3ab4144f2c764ff59d904c1fe989d72, type: 2}
@@ -11359,6 +11428,7 @@ MonoBehaviour:
   lastPlacedPosition: {x: 0, y: 0, z: 0}
   startPosition: {x: 0, y: 0, z: 0}
   endPosition: {x: 0, y: 0, z: 0}
+  zone: {fileID: 8006050}
   tile:
   - {fileID: 11400000, guid: cb8d08927d2f0410faff94dc86fa43ff, type: 2}
   - {fileID: 11400000, guid: 23e2650c68603479eb2d03f46355a270, type: 2}
@@ -13766,6 +13836,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1647554894}
     - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      propertyPath: zone
+      value: 
+      objectReference: {fileID: 8006050}
+    - target: {fileID: 4377728729089152392, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
       propertyPath: DefText
       value: 
       objectReference: {fileID: 787904621}
@@ -13865,6 +13939,9 @@ PrefabInstance:
     - {fileID: 658753175847945707, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5090783736321754613, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8006051}
     - targetCorrespondingSourceObject: {fileID: 5090783736321754613, guid: 3341b4986c0334c77b8cbb4b9d60dcd2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 996196092}

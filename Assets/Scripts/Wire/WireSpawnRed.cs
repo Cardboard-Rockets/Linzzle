@@ -3,6 +3,10 @@ using UnityEngine.Tilemaps;
 
 public class WireSpawnRed : BaseWire
 {
+
+    [SerializeField] public Zone zone;
+
+
     [SerializeField] Tile[] tile; // 0 - прямой, 1 - угловой, 2 - отзеркаленный
     [SerializeField] Tilemap tileMap;
 
@@ -23,6 +27,7 @@ public class WireSpawnRed : BaseWire
 
     void Start()
     {
+        placeZones = zone.Zones;
         if (place == null)
             Debug.LogError("PlaceScript reference is missing! Assign it to BaseWire component.");
 
@@ -55,6 +60,9 @@ public class WireSpawnRed : BaseWire
 
     void StartDrawingLine(Vector3Int startPos)
     {
+        if (!IsInAnyZone(startPos))
+            return;
+
         ResetDrawing();
         startPosition = startPos;
         lastPlacedPosition = startPos;
@@ -89,6 +97,8 @@ public class WireSpawnRed : BaseWire
 
     void ContinueDrawingLine(Vector3Int currentPos)
     {
+        if (!IsInAnyZone(currentPos))
+            return;
         Vector3Int direction = currentPos - lastPlacedPosition;
         int wireRotation = GetRotationFromDirection(direction);
 
