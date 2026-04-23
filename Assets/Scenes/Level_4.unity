@@ -910,6 +910,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 484163198}
     - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
+      propertyPath: startingMoney
+      value: 40000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2420072711831485339, guid: e481d2f1e24a446d5909e5a61a17f065, type: 3}
       propertyPath: startingPrices.Array.size
       value: 23
       objectReference: {fileID: 0}
@@ -8255,10 +8259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b672c00da72e9492bbbe39654c95e28e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ReworkedCameraSystem
-  minX: -20
-  maxX: 20
-  minY: -15
-  maxY: 6
   borderSwitch: 0
 --- !u!95 &1253009851
 Animator:
@@ -8294,7 +8294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a169dbb50a27b4a57b0cb898c66f7d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RTS_Camera
-  speed: 15
   dragSpeed: 0.35
   placeScript: {fileID: 2144291548}
   rcs: {fileID: 1253009850}
