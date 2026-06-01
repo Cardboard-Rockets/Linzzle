@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 605d785cb7177ed4e959fe3fe1912fa1
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Example/Content/Materials/DebugViewing Shadow.mat
+  uploadId: 819944

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: a727d1e044f910547b5bd9439ced5c3c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Platforms/YandexGames/Scripts/OwnHost/Editor/OwnHostEditor.cs
+  uploadId: 819944

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 696aca93f688b2945acff84e4231e282
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/AspectRatio/AspectRatio_build.cs
+  uploadId: 819944

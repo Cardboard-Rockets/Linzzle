@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ed7d118e22058f64e8303e50a91309bb
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/ProgressBar/HightProgressBar.css
+  uploadId: 819944

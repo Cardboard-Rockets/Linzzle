@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: fde912d7e07300649bb93b76bef76fbb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Scripts/EditorScr/Attributes/LabelYGAttribute.cs
+  uploadId: 819944

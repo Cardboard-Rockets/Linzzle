@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8ae2063ae9af1c0418943542136f4ff1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Scripts/EditorScr/Editor/BuildModify/ArchivingBuild.cs
+  uploadId: 819944

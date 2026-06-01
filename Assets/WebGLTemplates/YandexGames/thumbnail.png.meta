@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a73a57e687d5ff3448092abc2a5a8fa6
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/WebGLTemplates/YandexGames/thumbnail.png
+  uploadId: 819944

@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efa747916aa66674d96ea40ca8a480b2, type: 3}
+  m_Name: SettingsYG2
+  m_EditorClassIdentifier: Assembly-CSharp::YG.InfoYG
+  Basic:
+    platform: {fileID: 11400000, guid: fabe82a4ab034324eb452cc7109f6d19, type: 2}
+    autoApplySettings: 1
+    autoPauseGame: 1
+    editEventSystem: 1
+    autoGRA: 1
+    logInEditor: 1
+    archivingBuild: 1
+    syncInitSDK: 0
+    loadSceneIfSDKLate: 0
+    loadSceneIndex: 0
+    initDelaySimulation: 0
+    buildNumber: 0
+  Simulation:
+    device: 0
+    language: ru
+    advIntervalSimulation: 60
+    durationAdv: 0.5
+    loadAdv: 0
+    testFailAds: 0
+  Templates:
+    logoImageFormat: 0
+    backgroundImgFormat: 0
+    gradientBackgroundByLoadGame:
+      radial: 0
+      angleInclination: 140
+      color1: {r: 1, g: 0.831, b: 0.149, a: 1}
+      color2: {r: 0.36, g: 0.09, b: 1, a: 1}
+    customProgressBar: 1
+    progressBarSettigs:
+      round: 1
+      roundAngle: 10
+      width: 30
+      height: 24
+      color1: {r: 0.25, g: 0.6392, b: 1, a: 1}
+      color2: {r: 1, g: 0.831, b: 0.149, a: 0.7}
+    fixedAspectRatio: 0
+    aspectRatio: 16/9
+    disableForMobile: 1
+    fillBackground: 0
+    imageBackground: 0
+    imageName: background.jpg
+    gradientBackgroundByAspectRatio:
+      radial: 0
+      angleInclination: 140
+      color1: {r: 1, g: 0.831, b: 0.149, a: 1}
+      color2: {r: 0.36, g: 0.09, b: 1, a: 1}
+    pixelRatioEnable: 0
+    pixelRatioValue: 1.3
+    developerBuild: 0
+  platformInfo:
+    ownHost: 0
+  platformToggles:
+    autoPauseGame: 0
+    selectWebGLTemplate: 1
+    runInBackground: 1
+    enableExceptions: 1
+    compressionFormat: 1
+    decompressionFallback: 1
+    autoGraphicsAPI: 1
+    managedStrippingLevel: 1
+    dataCaching: 0
+    colorSpace: 0
+    archivingBuild: 0
+    syncInitSDK: 0

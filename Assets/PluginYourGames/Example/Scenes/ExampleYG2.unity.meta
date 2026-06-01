@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e49bf7e58fdb4db4c9df51f0ddb8f327
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Example/Scenes/ExampleYG2.unity
+  uploadId: 819944

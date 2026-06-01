@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e51e14c87051abd488156a41f0dc4152
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Scripts/Platform/Editor/AsmdefPlatformCreate.txt
+  uploadId: 819944

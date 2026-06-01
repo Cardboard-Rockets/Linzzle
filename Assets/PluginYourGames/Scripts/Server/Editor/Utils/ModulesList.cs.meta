@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: 9d05e901341089e4a82a673746e45ce5
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Scripts/Server/Editor/Utils/ModulesList.cs
+  uploadId: 819944

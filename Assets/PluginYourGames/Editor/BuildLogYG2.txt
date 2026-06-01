@@ -1,0 +1,3 @@
+﻿Build path: /Users/daniil_hodanovich/Unity_Projects/LinnzleBuilds/LZZLE1/LZZLE3B
+Build number: 2
+PluginYG version: 2.0092

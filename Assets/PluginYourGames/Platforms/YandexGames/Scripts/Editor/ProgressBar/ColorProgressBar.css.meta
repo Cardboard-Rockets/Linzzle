@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b75ca0e15c0fddc40bcb906b38bf1a32
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/ProgressBar/ColorProgressBar.css
+  uploadId: 819944

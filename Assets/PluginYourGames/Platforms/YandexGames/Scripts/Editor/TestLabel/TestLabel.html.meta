@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 16c26d9eef5c2b648abd344b443a855d
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/TestLabel/TestLabel.html
+  uploadId: 819944

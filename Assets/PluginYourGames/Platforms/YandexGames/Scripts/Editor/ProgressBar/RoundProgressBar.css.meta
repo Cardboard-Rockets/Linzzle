@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1d0c3134d0cd46c4b89869e9dc0058d2
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Platforms/YandexGames/Scripts/Editor/ProgressBar/RoundProgressBar.css
+  uploadId: 819944

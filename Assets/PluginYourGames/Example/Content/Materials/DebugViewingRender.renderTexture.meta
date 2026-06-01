@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4d24706698c829a46a56d8fa7d7b21c2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 8400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Example/Content/Materials/DebugViewingRender.renderTexture
+  uploadId: 819944

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3aebe6c9a1e86b949b110f3b4d2dc7e5
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 302343
+  packageName: Plugin Your Games (Unified API for WebGL and mobile stores)
+  packageVersion: 2.007
+  assetPath: Assets/PluginYourGames/Scripts/Server/Editor/UpdatePluginYGTemp.txt
+  uploadId: 819944
