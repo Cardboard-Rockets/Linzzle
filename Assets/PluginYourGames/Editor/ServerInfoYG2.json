@@ -160,6 +160,12 @@
             "doc": "https://max-games.ru/banner/"
         },
         {
+            "name": "TextGameLoad",
+            "version": "1.0",
+            "download": "https://max-games.ru/public/pluginYG2/modules/TextGameLoad.unitypackage",
+            "doc": "https://max-games.ru/plugin-yg/doc/template/"
+        },
+        {
             "name": "YandexGames",
             "version": "1.0091",
             "download": "https://max-games.ru/public/pluginYG2/platforms/YandexGames.unitypackage",
@@ -168,7 +174,7 @@
         },
         {
             "name": "YandexMobileAds",
-            "version": "1.0",
+            "version": "1.1",
             "download": "https://boosty.to/maximalist/posts/eb519b99-798b-4fcb-8cc6-0445ad171c85",
             "noLoad": true,
             "doc": "https://max-games.ru/plugin-yg/doc/Yandex-Mobile-Ads/",

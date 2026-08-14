@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Cardboard Rockets
   productName: Linzzle
-  defaultCursor: {fileID: 2800000, guid: 9159365ae6527f44eb40433053a26369, type: 3}
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -701,24 +701,24 @@ PlayerSettings:
   webWasm2023: 0
   webEnableSubmoduleStrippingCompatibility: 0
   scriptingDefineSymbols:
-    Android: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
+    Android: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
     EmbeddedLinux: DOTWEEN
     GameCoreScarlett: DOTWEEN
     GameCoreXboxOne: DOTWEEN
     Kepler: DOTWEEN
-    LinuxHeadlessSimulation: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
-    Nintendo Switch: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
+    LinuxHeadlessSimulation: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
+    Nintendo Switch: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
     Nintendo Switch 2: DOTWEEN
-    PS4: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
-    PS5: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
+    PS4: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
+    PS5: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
     QNX: DOTWEEN
-    Standalone: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
+    Standalone: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
     VisionOS: DOTWEEN
-    WebGL: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
-    Windows Store Apps: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
-    XboxOne: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
-    iPhone: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
-    tvOS: DOTWEEN;YandexGamesPlatform_yg;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2
+    WebGL: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
+    Windows Store Apps: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
+    XboxOne: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
+    iPhone: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
+    tvOS: DOTWEEN;PLUGIN_YG_2;TMP_YG2;InterstitialAdv_yg;Authorization_yg;RU_YG2;YandexGamesPlatform_yg;EnvirData_yg
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
